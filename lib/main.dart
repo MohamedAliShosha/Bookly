@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class BookStore extends StatelessWidget {
@@ -5,9 +6,12 @@ class BookStore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: kPrimaryColor,
+      ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: const Scaffold(),
     );
   }
 }
