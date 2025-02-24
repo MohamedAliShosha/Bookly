@@ -5,22 +5,18 @@ import 'package:go_router/go_router.dart';
 abstract class AppRouter {
   static const kHomeView = '/homeView';
 
-  static final routes = [
-    GoRouter(
-      routes: [
-        GoRoute(
-          path: '/',
-          builder: (context, state) => const SplashView(),
-        ),
-      ],
-    ),
-    GoRouter(
-      routes: [
-        GoRoute(
-          path: kHomeView,
-          builder: (context, state) => const HomeView(),
-        ),
-      ],
-    ),
-  ];
+  // static used to make the method accessible without creating an instance of the class
+  static final router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/', // This is the starting screen path of the app
+        builder: (context, state) => const SplashView(), // The started screen
+      ),
+      GoRoute(
+        path:
+            kHomeView, // The path that will be used to navigate to the home screen
+        builder: (context, state) => const HomeView(),
+      ),
+    ],
+  );
 }

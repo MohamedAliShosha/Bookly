@@ -1,4 +1,5 @@
 import 'package:book_store_app/constants.dart';
+import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 class BookStore extends StatelessWidget {
@@ -6,12 +7,12 @@ class BookStore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: ThemeData(
         scaffoldBackgroundColor: kPrimaryColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(),
+      routerConfig: AppRouter.router,
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:book_store_app/core/utils/app_router.dart';
+import 'package:book_store_app/core/utils/assets_data.dart';
+import 'package:book_store_app/features/splash/presentation/widgets/sliding_animated_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -30,10 +32,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [],
+      children: [
+        Image.asset(AssetsData.logo),
+        SlidingAnimatedText(
+          slidingAnimation: slidingAnimation,
+        ),
+      ],
     );
   }
 
