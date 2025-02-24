@@ -1,3 +1,4 @@
 class AssetsData {
-  static const logo = 'Assets/Frame.png';
+  static const frame = 'Assets/images/Frame.png';
+  static const logo = 'Assets/images/Logo.png';
 }

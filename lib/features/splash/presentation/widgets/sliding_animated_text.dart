@@ -18,6 +18,10 @@ class SlidingAnimatedText extends StatelessWidget {
             position: slidingAnimation,
             child: const Text(
               'Read Free Books',
+              style: TextStyle(
+                color: Color(0xfffff1c2),
+                fontWeight: FontWeight.bold,
+              ),
               textAlign: TextAlign
                   .center, // The Frame that surrounds the text take the full width of the screen
               // So When i need to move the text i use the textAlign property
