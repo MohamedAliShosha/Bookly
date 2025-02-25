@@ -3,52 +3,55 @@ import 'package:book_store_app/features/home/widgets/custom_app_bar.dart';
 import 'package:book_store_app/features/home/widgets/featured_books_list_view.dart';
 import 'package:book_store_app/features/home/widgets/newest_books_list_view.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      physics: BouncingScrollPhysics(),
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: CustomAppBar(),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
                 child: Row(
                   children: [
                     Text(
                       'For You',
-                      style: Styles.txtStyle16,
+                      style: Styles.txtStyle16.copyWith(
+                          fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                     ),
                   ],
                 ),
               ),
-              FeaturedBooksListView(),
-              SizedBox(
+              const FeaturedBooksListView(),
+              const SizedBox(
                 height: 50,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   'Newest Books',
                   style: Styles.txtStyle18,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
           ),
         ),
-        SliverFillRemaining(
+        const SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: NewestBooksListView(),
