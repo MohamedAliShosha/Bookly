@@ -18,7 +18,8 @@ class FeaturedBooksListView extends StatelessWidget {
             child: GestureDetector(
               onTap: () {},
               child: const CustomBookImage(
-                imageUrl: 'https://images.app.goo.gl/81pawXJE73kuhLPR9',
+                imageUrl:
+                    'https://m.media-amazon.com/images/M/MV5BMTc3NTUzNTI4MV5BMl5BanBnXkFtZTgwNjU0NjU5NzE@._V1_FMjpg_UX1000_.jpg',
               ),
             ),
           );

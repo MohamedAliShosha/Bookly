@@ -1,3 +1,4 @@
+import 'package:book_store_app/features/home/widgets/newest_book_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class NewestBooksListView extends StatelessWidget {
@@ -12,7 +13,7 @@ class NewestBooksListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return const Padding(
           padding: EdgeInsets.symmetric(vertical: 5),
-          // child: NewestBookListViewItem
+          child: NewestBookListViewItem(),
         );
       },
     );

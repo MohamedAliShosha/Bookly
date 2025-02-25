@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:flutter/material.dart';
 
 abstract class Styles {
@@ -20,6 +21,7 @@ abstract class Styles {
   static const txtStyle16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500, // Medium
+    color: kSecondaryColor,
   );
 
   static const txtStyle30 = TextStyle(
