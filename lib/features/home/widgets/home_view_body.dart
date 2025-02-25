@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/styles.dart';
 import 'package:book_store_app/features/home/widgets/custom_app_bar.dart';
 import 'package:book_store_app/features/home/widgets/featured_books_list_view.dart';
@@ -30,6 +31,25 @@ class HomeViewBody extends StatelessWidget {
                       'For You',
                       style: Styles.txtStyle16.copyWith(
                           fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
+                    ),
+                    const Spacer(),
+                    Column(
+                      children: [
+                        Text(
+                          'View all',
+                          style: Styles.txtStyle16.copyWith(
+                            fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 0,
+                          width: 100,
+                          child: Divider(
+                            thickness: 2,
+                            color: kSecondaryColor,
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
