@@ -15,6 +15,9 @@ class CustomAppBar extends StatelessWidget {
             height: 18,
           ),
           const Spacer(),
+          const Icon(
+            Icons.card_travel,
+          ),
         ],
       ),
     );
