@@ -1,8 +1,8 @@
 import 'package:book_store_app/core/utils/app_router.dart';
-import 'package:book_store_app/features/details/presentation/views/details_view.dart';
+
 import 'package:book_store_app/features/home/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:go_router/go_router.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
