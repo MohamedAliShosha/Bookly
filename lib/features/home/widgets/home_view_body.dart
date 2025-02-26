@@ -56,10 +56,10 @@ class HomeViewBody extends StatelessWidget {
               ),
               const FeaturedBooksListView(),
               const SizedBox(
-                height: 50,
+                height: 25,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
                   'Newest Books',
                   style: Styles.txtStyle18.copyWith(
@@ -68,14 +68,14 @@ class HomeViewBody extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
             ],
           ),
         ),
         const SliverFillRemaining(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: EdgeInsets.symmetric(horizontal: 20),
             child: NewestBooksListView(),
           ),
         ),
