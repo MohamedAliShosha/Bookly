@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/styles.dart';
 import 'package:book_store_app/features/home/widgets/book_rating.dart';
 import 'package:book_store_app/features/home/widgets/custom_book_image.dart';
@@ -14,8 +15,7 @@ class NewestBookListViewItem extends StatelessWidget {
       child: Row(
         children: [
           const CustomBookImage(
-            imageUrl:
-                'https://m.media-amazon.com/images/M/MV5BMTc3NTUzNTI4MV5BMl5BanBnXkFtZTgwNjU0NjU5NzE@._V1_FMjpg_UX1000_.jpg',
+            imageUrl: kBookImageUrl,
           ),
           const SizedBox(
             width: 30,
