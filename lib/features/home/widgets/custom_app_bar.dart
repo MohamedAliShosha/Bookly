@@ -12,14 +12,14 @@ class CustomAppBar extends StatelessWidget {
         children: [
           Image.asset(
             AssetsData.frame,
-            height: 24,
+            height: 30,
           ),
           const Spacer(),
-          const Icon(
-            Icons.shopping_cart_outlined,
-            color: Color(0xffFFEEC1),
-            size: 30,
-          ),
+          // const Icon(
+          //   Icons.shopping_cart_outlined,
+          //   color: Color(0xffFFEEC1),
+          //   size: 30,
+          // ),
         ],
       ),
     );
