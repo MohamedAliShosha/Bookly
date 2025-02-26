@@ -10,12 +10,13 @@ abstract class Styles {
   static const txtStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal, // Regular
-    // fontFamily: kGtSectraFine, // Exeptional font family will be used here only
+    color: Color(0xffFFEEC1),
   );
 
   static const txtStyle14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal, // Regular
+    color: Color(0xffFFEEC1),
   );
 
   static const txtStyle16 = TextStyle(
@@ -27,5 +28,6 @@ abstract class Styles {
   static const txtStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.normal, // Regular
+    color: Color(0xffFFEEC1),
   );
 }

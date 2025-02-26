@@ -2,6 +2,7 @@ import 'package:book_store_app/core/utils/styles.dart';
 import 'package:book_store_app/features/home/widgets/book_rating.dart';
 import 'package:book_store_app/features/home/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NewestBookListViewItem extends StatelessWidget {
   const NewestBookListViewItem({super.key});
@@ -26,9 +27,10 @@ class NewestBookListViewItem extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width *
                       0.5, // 50% of width of screen
-                  child: const Text(
+                  child: Text(
                     'The Jungle Book',
-                    style: Styles.txtStyle20,
+                    style: Styles.txtStyle20.copyWith(
+                        fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                     overflow: TextOverflow
                         .ellipsis, // means if text is too long, it will be cut off and replaced with '...'
                     maxLines: 2,
@@ -37,9 +39,10 @@ class NewestBookListViewItem extends StatelessWidget {
                 const SizedBox(
                   height: 3,
                 ),
-                const Text(
+                Text(
                   'Rudyard Kipling',
-                  style: Styles.txtStyle14,
+                  style: Styles.txtStyle14.copyWith(
+                      fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                 ),
                 const SizedBox(
                   height: 3,
@@ -50,8 +53,8 @@ class NewestBookListViewItem extends StatelessWidget {
                       Text(
                         'Free',
                         style: Styles.txtStyle20.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                       ),
                       const Spacer(), // Thanks to the expanded widget that i wrapped the column with it, Now I can use Spacer because there will be an available space between the text and the icon
                       const BookRating(
