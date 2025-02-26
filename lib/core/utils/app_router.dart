@@ -20,7 +20,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path:
-            kHomeView, // The path that will be used to navigate to the home screen
+            kDetailsView, // The path that will be used to navigate to the home screen
         builder: (context, state) => const DetailsView(),
       ),
     ],
