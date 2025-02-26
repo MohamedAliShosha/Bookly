@@ -4,6 +4,7 @@ abstract class Styles {
   static const txtStyle18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600, // SemiBold
+    color: Color(0xffFFEEC1),
   );
 
   static const txtStyle20 = TextStyle(

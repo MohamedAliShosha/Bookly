@@ -58,11 +58,13 @@ class HomeViewBody extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   'Newest Books',
-                  style: Styles.txtStyle18,
+                  style: Styles.txtStyle18.copyWith(
+                    fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
+                  ),
                 ),
               ),
               const SizedBox(
