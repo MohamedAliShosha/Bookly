@@ -1,8 +1,8 @@
-import 'package:book_store_app/features/home/widgets/newest_book_list_view_item.dart';
+import 'package:book_store_app/features/home/widgets/random_book_list_view_item.dart';
 import 'package:flutter/material.dart';
 
-class NewestBooksListView extends StatelessWidget {
-  const NewestBooksListView({super.key});
+class RandomBookListView extends StatelessWidget {
+  const RandomBookListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class NewestBooksListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return const Padding(
           padding: EdgeInsets.symmetric(vertical: 5),
-          child: NewestBookListViewItem(),
+          child: RandomBookListViewItem(),
         );
       },
     );
