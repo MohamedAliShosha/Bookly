@@ -9,11 +9,7 @@ class ApiService {
   ApiService(this.dio);
 
   Future<Map<String, dynamic>> get({required String endpoint}) async {
-    try {
-      final response = await dio.get('$_baseUrl$endpoint');
-      return response.data; // This data is already decoded
-    } on DioException catch (e) {
-      throw e;
-    }
+    final response = await dio.get('$_baseUrl$endpoint');
+    return response.data; // This data is already decoded
   }
 }
