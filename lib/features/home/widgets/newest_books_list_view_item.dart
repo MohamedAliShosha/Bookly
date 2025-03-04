@@ -5,8 +5,8 @@ import 'package:book_store_app/features/home/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RandomBookListViewItem extends StatelessWidget {
-  const RandomBookListViewItem({super.key});
+class NewestBookListViewItem extends StatelessWidget {
+  const NewestBookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {

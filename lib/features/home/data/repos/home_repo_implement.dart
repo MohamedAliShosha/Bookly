@@ -14,13 +14,13 @@ class HomeRepoImplement implements HomeRepo {
     try {
       var data = await apiService.get(endpoint: 'books/random');
 
-      List<BookModel> books = [];
+      List<BookModel> books = []; // Empty list to store books
       for (var item in data.values) {
         books.add(BookModel.fromJson(item));
       }
       return Right(
           books); // Returning the right side as a list of books as Right
-    } on Exception catch (e) {
+    } on Exception {
       return Left(
           ServerFailure()); // Returning the left side as a failure as Left
     }
