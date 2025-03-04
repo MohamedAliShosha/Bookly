@@ -3,6 +3,7 @@ import 'package:book_store_app/core/utils/api_service.dart';
 import 'package:book_store_app/features/home/data/models/book_model/book_model.dart';
 import 'package:book_store_app/features/home/data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImplement implements HomeRepo {
   final ApiService apiService; // Creating an instance of the ApiService class
@@ -22,9 +23,15 @@ class HomeRepoImplement implements HomeRepo {
       }
       return Right(
           books); // Returning the right side as a list of books as Right
-    } on Exception {
+    } catch (e) {
+      if (e is DioException) {
+        return Left(
+          ServerFailure.fromDioException(e),
+        ); // Returning the left side as a failure as Left
+      }
       return Left(
-          ServerFailure()); // Returning the left side as a failure as Left
+        ServerFailure(e.toString()),
+      );
     }
   }
 
