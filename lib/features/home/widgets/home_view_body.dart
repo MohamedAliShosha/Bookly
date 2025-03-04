@@ -61,7 +61,7 @@ class HomeViewBody extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
-                  'Get a Ramdom Book',
+                  'Get a New Book',
                   style: Styles.txtStyle18.copyWith(
                     fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
                   ),
