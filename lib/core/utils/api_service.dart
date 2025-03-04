@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 
 class ApiService {
   final _baseUrl =
-      'https://potterapi-fedeperin.vercel.app/en/'; // private instance of the base URL
+      'https://www.googleapis.com/books/v1/'; // private instance of the base URL
 
   final Dio _dio; // private instance of Dio
   ApiService(this._dio);
