@@ -10,7 +10,7 @@ class HomeRepoImplement implements HomeRepo {
   HomeRepoImplement(this.apiService);
 
   @override
-  Future<Either<Failures, List<BookModel>>> fetchRandomBook() async {
+  Future<Either<Failures, List<BookModel>>> fetchNewestBooks() async {
     try {
       var data = await apiService.get(endpoint: 'books/random');
 
