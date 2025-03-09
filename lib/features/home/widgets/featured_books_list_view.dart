@@ -1,4 +1,3 @@
-import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:book_store_app/core/widgets/custom_error_widget.dart';
 import 'package:book_store_app/core/widgets/custom_loading_indicator.dart';
@@ -22,7 +21,7 @@ class FeaturedBooksListView extends StatelessWidget {
               physics:
                   const BouncingScrollPhysics(), // Makes a bouncing effects
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -30,8 +29,9 @@ class FeaturedBooksListView extends StatelessWidget {
                     onTap: () {
                       GoRouter.of(context).push(AppRouter.kDetailsView);
                     },
-                    child: const CustomBookImage(
-                      imageUrl: kBookImageUrl,
+                    child: CustomBookImage(
+                      imageUrl:
+                          state.books[index].volumeInfo.imageLinks.thumbnail,
                     ),
                   ),
                 );
