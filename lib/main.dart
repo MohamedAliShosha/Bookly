@@ -19,7 +19,8 @@ class BookStore extends StatelessWidget {
           create: (context) => FeaturedBooksCubit(
             // The HomeRepoImplement is the repeated code that can be replaced with a service locator
             getIt.get<HomeRepoImplement>(),
-          ),
+            // .. called a spread operator used to call a method on an object and return the object itself
+          )..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) => NewestBooksCubit(

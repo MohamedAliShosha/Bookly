@@ -29,7 +29,7 @@ class HomeViewBody extends StatelessWidget {
                   children: [
                     Text(
                       'For You',
-                      style: Styles.txtStyle16.copyWith(
+                      style: Styles.textStyle16.copyWith(
                           fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                     ),
                     const Spacer(),
@@ -37,7 +37,7 @@ class HomeViewBody extends StatelessWidget {
                       children: [
                         Text(
                           'View all',
-                          style: Styles.txtStyle16.copyWith(
+                          style: Styles.textStyle16.copyWith(
                             fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
                           ),
                         ),
@@ -62,7 +62,7 @@ class HomeViewBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Text(
                   'Get a New Book',
-                  style: Styles.txtStyle18.copyWith(
+                  style: Styles.textStyle18.copyWith(
                     fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
                   ),
                 ),

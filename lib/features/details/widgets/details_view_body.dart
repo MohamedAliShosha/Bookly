@@ -36,7 +36,7 @@ class DetailsViewBody extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 'Jungle Book',
-                style: Styles.txtStyle20.copyWith(
+                style: Styles.textStyle20.copyWith(
                   fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
                 ),
               ),
@@ -48,7 +48,7 @@ class DetailsViewBody extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 'Rudyard Kipling',
-                style: Styles.txtStyle14.copyWith(
+                style: Styles.textStyle14.copyWith(
                   fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
                 ),
               ),
@@ -62,7 +62,7 @@ class DetailsViewBody extends StatelessWidget {
                 maxLines: 6,
                 overflow: TextOverflow.ellipsis,
                 'Description: The Jungle Book is a collection of stories by the English author Rudyard Kipling. Most of the characters are animals such as Shere Khan the tiger and Baloo the bear, though a principal character',
-                style: Styles.txtStyle14.copyWith(
+                style: Styles.textStyle14.copyWith(
                   fontFamily: GoogleFonts.ruslanDisplay().fontFamily,
                 ),
               ),

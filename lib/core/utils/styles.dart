@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
 abstract class Styles {
-  static const txtStyle18 = TextStyle(
+  static const textStyle18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600, // SemiBold
     color: Color(0xffFFEEC1),
   );
 
-  static const txtStyle20 = TextStyle(
+  static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal, // Regular
     color: Color(0xffFFEEC1),
   );
 
-  static const txtStyle14 = TextStyle(
+  static const textStyle14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal, // Regular
     color: Color(0xffFFEEC1),
   );
 
-  static const txtStyle16 = TextStyle(
+  static const textStyle16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500, // Medium
     color: Color(0xffFFEEC1),
   );
 
-  static const txtStyle30 = TextStyle(
+  static const textStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.normal, // Regular
     color: Color(0xffFFEEC1),

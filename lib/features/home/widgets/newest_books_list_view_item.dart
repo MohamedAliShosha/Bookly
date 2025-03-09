@@ -29,7 +29,7 @@ class NewestBookListViewItem extends StatelessWidget {
                       0.5, // 50% of width of screen
                   child: Text(
                     'The Jungle Book',
-                    style: Styles.txtStyle20.copyWith(
+                    style: Styles.textStyle20.copyWith(
                         fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                     overflow: TextOverflow
                         .ellipsis, // means if text is too long, it will be cut off and replaced with '...'
@@ -41,7 +41,7 @@ class NewestBookListViewItem extends StatelessWidget {
                 ),
                 Text(
                   'Rudyard Kipling',
-                  style: Styles.txtStyle14.copyWith(
+                  style: Styles.textStyle14.copyWith(
                       fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                 ),
                 const SizedBox(
@@ -52,7 +52,7 @@ class NewestBookListViewItem extends StatelessWidget {
                     children: [
                       Text(
                         'Free',
-                        style: Styles.txtStyle20.copyWith(
+                        style: Styles.textStyle20.copyWith(
                             fontWeight: FontWeight.bold,
                             fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
                       ),
