@@ -10,8 +10,9 @@ class CustomBookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
+      // cached network image is used to cache the image and load it faster
       child: CachedNetworkImage(
-        // errorWidget: (context, url, error) => const Icon(Icons.warning),
+        errorWidget: (context, url, error) => const Icon(Icons.warning),
         fit: BoxFit.fill,
         imageUrl: imageUrl,
       ),
