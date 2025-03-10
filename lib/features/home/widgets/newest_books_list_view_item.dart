@@ -1,12 +1,15 @@
 import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/styles.dart';
+import 'package:book_store_app/features/home/data/models/book_model/book_model.dart';
 import 'package:book_store_app/features/home/widgets/book_rating.dart';
 import 'package:book_store_app/features/home/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NewestBookListViewItem extends StatelessWidget {
-  const NewestBookListViewItem({super.key});
+  const NewestBookListViewItem({super.key, required this.bookModel});
+
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +17,8 @@ class NewestBookListViewItem extends StatelessWidget {
       height: 150,
       child: Row(
         children: [
-          const CustomBookImage(
-            imageUrl: kBookImageUrl,
+          CustomBookImage(
+            imageUrl: bookModel.volumeInfo.imageLinks.thumbnail,
           ),
           const SizedBox(
             width: 30,
