@@ -1,3 +1,5 @@
+import 'package:book_store_app/features/details/presentation/views/details_view.dart';
+import 'package:book_store_app/features/home/data/models/book_model/book_model.dart';
 import 'package:book_store_app/features/home/presentation/views/home_view.dart';
 import 'package:book_store_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
@@ -17,11 +19,14 @@ abstract class AppRouter {
             kHomeView, // The path that will be used to navigate to the home screen
         builder: (context, state) => const HomeView(),
       ),
-      // GoRoute(
-      //   path:
-      //       kDetailsView, // The path that will be used to navigate to the home screen
-      //   builder: (context, state) => const DetailsView(),
-      // ),
+      GoRoute(
+        path:
+            kDetailsView, // The path that will be used to navigate to the home screen
+        builder: (context, state) => DetailsView(
+          bookModel: state.extra
+              as BookModel, // 2 Sending the book model to the details view to be used in the details view
+        ),
+      ),
     ],
   );
 }
