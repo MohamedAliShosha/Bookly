@@ -1,11 +1,9 @@
-import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:book_store_app/core/widgets/custom_error_widget.dart';
 import 'package:book_store_app/core/widgets/custom_loading_indicator.dart';
 import 'package:book_store_app/features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 import 'package:book_store_app/features/home/widgets/newest_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class NewestBookListView extends StatelessWidget {
   const NewestBookListView({super.key});
@@ -22,14 +20,8 @@ class NewestBookListView extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
-                child: GestureDetector(
-                  onTap: () {
-                    GoRouter.of(context).push(AppRouter.kDetailsView,
-                        extra: state.books[index]);
-                  },
-                  child: NewestBookListViewItem(
-                    bookModel: state.books[index],
-                  ),
+                child: NewestBookListViewItem(
+                  bookModel: state.books[index],
                 ),
               );
             },

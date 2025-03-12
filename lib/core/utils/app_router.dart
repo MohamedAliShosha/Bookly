@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
-  static const kDetailsView = '/detailsView';
+  static const kBookDetailsView = '/detailsView';
   // static used to make the method accessible without creating an instance of the class
   static final router = GoRouter(
     routes: [
@@ -21,7 +21,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path:
-            kDetailsView, // The path that will be used to navigate to the home screen
+            kBookDetailsView, // The path that will be used to navigate to the home screen
         builder: (context, state) => DetailsView(
           bookModel: state.extra
               as BookModel, // 2 Sending the book model to the details view to be used in the details view

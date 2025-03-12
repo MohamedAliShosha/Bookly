@@ -30,7 +30,7 @@ class FeaturedBooksListView extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () {
                       GoRouter.of(context).push(
-                        AppRouter.kDetailsView,
+                        AppRouter.kBookDetailsView,
                         extra: state.books[
                             index], // Pass the book model to the details view
                       );
