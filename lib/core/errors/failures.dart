@@ -33,9 +33,6 @@ class ServerFailure extends Failures {
           return ServerFailure('No Internet Connection');
         }
         return ServerFailure('Unknown Error, Please try again later');
-      default:
-        return ServerFailure(
-            'Oops there was an unknown Error, Please try again later');
     }
   }
 
