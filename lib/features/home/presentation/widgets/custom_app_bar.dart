@@ -15,11 +15,11 @@ class CustomAppBar extends StatelessWidget {
             height: 30,
           ),
           const Spacer(),
-          // const Icon(
-          //   Icons.shopping_cart_outlined,
-          //   color: Color(0xffFFEEC1),
-          //   size: 30,
-          // ),
+          const Icon(
+            Icons.search,
+            color: Color(0xffFFEEC1),
+            size: 30,
+          ),
         ],
       ),
     );
