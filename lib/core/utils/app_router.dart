@@ -1,11 +1,13 @@
 import 'package:book_store_app/features/details/presentation/views/details_view.dart';
 import 'package:book_store_app/features/home/data/models/book_model/book_model.dart';
 import 'package:book_store_app/features/home/presentation/views/home_view.dart';
+import 'package:book_store_app/features/search/presentation/views/search_view.dart';
 import 'package:book_store_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
+  static const kSearchView = '/searchView';
   static const kBookDetailsView = '/detailsView';
   // static used to make the method accessible without creating an instance of the class
   static final router = GoRouter(
@@ -18,6 +20,11 @@ abstract class AppRouter {
         path:
             kHomeView, // The path that will be used to navigate to the home screen
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path:
+            kSearchView, // The path that will be used to navigate to the home screen
+        builder: (context, state) => const SearchView(),
       ),
       GoRoute(
         path:
