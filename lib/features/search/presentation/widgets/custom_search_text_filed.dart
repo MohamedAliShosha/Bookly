@@ -26,16 +26,24 @@ class CustomSearchTextField extends StatelessWidget {
             color: ColorsManager.kYellowColor,
           ),
         ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: ColorsManager.kYellowColor,
-          ),
-        ),
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: ColorsManager.kYellowColor,
-          ),
-        ),
+        focusedBorder: focusedBorder(),
+        enabledBorder: enabledBorder(),
+      ),
+    );
+  }
+
+  OutlineInputBorder enabledBorder() {
+    return const OutlineInputBorder(
+      borderSide: BorderSide(
+        color: ColorsManager.kYellowColor,
+      ),
+    );
+  }
+
+  OutlineInputBorder focusedBorder() {
+    return const OutlineInputBorder(
+      borderSide: BorderSide(
+        color: ColorsManager.kYellowColor,
       ),
     );
   }
