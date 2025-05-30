@@ -1,5 +1,5 @@
-import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/app_router.dart';
+import 'package:book_store_app/core/utils/colors_manager.dart';
 import 'package:book_store_app/core/utils/service_locator.dart';
 import 'package:book_store_app/features/home/data/repos/home_repo_implement.dart';
 import 'package:book_store_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
@@ -30,7 +30,7 @@ class BookStore extends StatelessWidget {
       ],
       child: MaterialApp.router(
         theme: ThemeData(
-          scaffoldBackgroundColor: kPrimaryColor,
+          scaffoldBackgroundColor: ColorsManager.kGreenColor,
           textTheme: GoogleFonts.interTextTheme(
             ThemeData.dark().textTheme,
           ),
