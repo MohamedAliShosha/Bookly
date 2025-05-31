@@ -1,5 +1,6 @@
 import 'package:book_store_app/core/utils/colors_manager.dart';
 import 'package:book_store_app/features/search/presentation/widgets/custom_search_text_filed.dart';
+import 'package:book_store_app/features/search/presentation/widgets/search_result_list_view.dart';
 import 'package:flutter/material.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -29,9 +30,9 @@ class SearchViewBody extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              // Expanded(
-              //   child: SearchedResultListView(),
-              // ),
+              const Expanded(
+                child: SearchResultListView(),
+              ),
             ],
           ),
         ),
