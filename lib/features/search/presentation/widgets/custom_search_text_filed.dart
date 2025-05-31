@@ -1,5 +1,7 @@
 import 'package:book_store_app/core/utils/colors_manager.dart';
+import 'package:book_store_app/features/search/presentation/manager/SearchBookCubit/search_book_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomSearchTextField extends StatelessWidget {
   CustomSearchTextField({super.key});
@@ -20,7 +22,18 @@ class CustomSearchTextField extends StatelessWidget {
           color: ColorsManager.kYellowColor.withOpacity(0.5),
         ),
         suffixIcon: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            final value = _searchController.text;
+            if (value.isEmpty) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Please enter a valid search term'),
+                ),
+              );
+            }
+            context.read<SearchCubit>().fetchSearchBooks(category: value);
+            _searchController.clear();
+          },
           icon: const Icon(
             Icons.search,
             color: ColorsManager.kYellowColor,

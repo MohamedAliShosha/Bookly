@@ -30,7 +30,7 @@ abstract class AppRouter {
             kSearchView, // The path that will be used to navigate to the home screen
         builder: (context, state) => BlocProvider(
           create: (context) => SearchCubit(
-            getIt.get<SearchRepoImplement>(),
+            getIt<SearchRepoImplement>(),
           ),
           child: const SearchView(),
         ),
