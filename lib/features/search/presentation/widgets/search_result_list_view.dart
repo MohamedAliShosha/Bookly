@@ -1,4 +1,5 @@
 import 'package:book_store_app/core/utils/styles.dart';
+import 'package:book_store_app/features/search/presentation/widgets/custom_book_image2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -20,14 +21,7 @@ class SearchResultListView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
               child: Row(
                 children: [
-                  SizedBox(
-                    width: 80,
-                    height: 120,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(16),
-                      child: Image.asset('Assets/images/test_image.png'),
-                    ),
-                  ),
+                  const CustomBookImage2(),
                   const SizedBox(
                     width: 20,
                   ),
