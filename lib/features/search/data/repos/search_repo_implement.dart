@@ -8,7 +8,7 @@ import 'package:dio/dio.dart';
 class SearchRepoImplement implements SearchRepo {
   final ApiService apiService;
 
-  SearchRepoImplement({required this.apiService});
+  SearchRepoImplement(this.apiService);
   @override
   Future<Either<Failures, List<BookModel>>> fetchSearchBooks(
       {required String category}) async {
