@@ -19,9 +19,10 @@ class SearchResultListView extends StatelessWidget {
           print('state is success');
           return ListView.builder(
             physics: const BouncingScrollPhysics(),
-            itemCount: 10,
+            // itemExtent: 100, // used to set the height of each item
+            itemCount: state.books.length,
             itemBuilder: (context, index) {
-              return const SearchResultListViewItem();
+              return SearchResultListViewItem(bookModel: state.books[index]);
             },
           );
         } else if (state is SearchFailure) {
