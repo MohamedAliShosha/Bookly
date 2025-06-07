@@ -1,7 +1,6 @@
 import 'package:book_store_app/core/utils/styles.dart';
 import 'package:book_store_app/features/home/data/models/book_model/book_model.dart';
 import 'package:book_store_app/features/home/presentation/widgets/books_action.dart';
-import 'package:book_store_app/features/home/presentation/widgets/custom_book_details_app_bar.dart';
 import 'package:book_store_app/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
 
@@ -21,10 +20,6 @@ class BookDetailViewBody extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: CustomBookDetailsAppBar(),
-            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 50),
               child: SizedBox(

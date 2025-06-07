@@ -27,12 +27,13 @@ class SearchResultListViewItem extends StatelessWidget {
               width: 20,
             ),
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width *
+                        0.5, // 50% of width of screen
+                    child: Text(
                       bookModel.volumeInfo.title ?? 'No Title',
                       style: Styles.textStyle20.copyWith(
                           fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
@@ -40,36 +41,38 @@ class SearchResultListViewItem extends StatelessWidget {
                           .ellipsis, // means if text is too long, it will be cut off and replaced with '...'
                       maxLines: 2,
                     ),
-                    const SizedBox(
-                      height: 10,
+                  ),
+                  const SizedBox(
+                    height: 3,
+                  ),
+                  Text(
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    bookModel.volumeInfo.authors != null &&
+                            bookModel.volumeInfo.authors!.isNotEmpty
+                        ? bookModel.volumeInfo.authors![0]
+                        : 'No Author',
+                    style: Styles.textStyle14.copyWith(
+                        fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
+                  ),
+                  const SizedBox(
+                    height: 3,
+                  ),
+                  Flexible(
+                    child: Row(
+                      children: [
+                        Text(
+                          'Free',
+                          style: Styles.textStyle20.copyWith(
+                              fontWeight: FontWeight.bold,
+                              fontFamily:
+                                  GoogleFonts.ruslanDisplay().fontFamily),
+                        ),
+                        const Spacer(), // Thanks to the expanded widget that i wrapped the column with it, Now I can use Spacer because there will be an available space between the text and the icon
+                      ],
                     ),
-                    Text(
-                      bookModel.volumeInfo.authors != null &&
-                              bookModel.volumeInfo.authors!.isNotEmpty
-                          ? bookModel.volumeInfo.authors![0]
-                          : 'No Author',
-                      style: Styles.textStyle14.copyWith(
-                          fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Flexible(
-                      child: Row(
-                        children: [
-                          Text(
-                            'Free',
-                            style: Styles.textStyle20.copyWith(
-                                fontWeight: FontWeight.bold,
-                                fontFamily:
-                                    GoogleFonts.ruslanDisplay().fontFamily),
-                          ),
-                          const Spacer(), // Thanks to the expanded widget that i wrapped the column with it, Now I can use Spacer because there will be an available space between the text and the icon
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
             ),
           ],
