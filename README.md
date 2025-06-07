@@ -1,4 +1,4 @@
-# 📚 Bookstore App
+# 📚 Book Store App
 
 A modern mobile app for discovering and exploring books, featuring:
 
@@ -14,7 +14,7 @@ A modern mobile app for discovering and exploring books, featuring:
 
 🏠 Home	Sections: "For You" (personalized books) + "Newest Books"
 
-📖 Details	Full book info: cover, title, author, rating, description, price, preview button
+📖 Details	Full book info: cover, title, author, description, price, preview button
 
 ## 🛠️ Tech Stack
 
@@ -34,56 +34,70 @@ A modern mobile app for discovering and exploring books, featuring:
 lib/
 │
 ├── core/
-│   ├── utils/
-│   │   ├── app_router.dart
-│   │   ├── service_locator.dart
-│   │   └── styles.dart
-│   └── widgets/
-│       ├── custom_error_widget.dart
-│       └── custom_loading_indicator.dart
+│   ├── utils/                # App-wide utilities (router, styles, service locator, etc.)
+│   ├── widgets/              # Shared/reusable widgets (loading, error, etc.)
 │
 ├── features/
+│   ├── home/
+│   │   ├── data/             # Data layer: models, repositories, data sources
+│   │   │   ├── models/
+│   │   │   │   └── book_model/
+│   │   │   │       └── book_model.dart
+│   │   │   └── repos/
+│   │   │       └── home_repo_implement.dart
+│   │   ├── presentation/     # UI layer: cubits, views, widgets
+│   │   │   ├── manager/
+│   │   │   │   ├── featured_books_cubit/
+│   │   │   │   │   └── featured_books_cubit.dart
+│   │   │   │   └── newest_books_cubit/
+│   │   │   │       └── newest_books_cubit.dart
+│   │   │   ├── views/
+│   │   │   │   └── home_view.dart
+│   │   │   └── widgets/
+│   │   │       ├── custom_app_bar.dart
+│   │   │       ├── custom_book_image.dart
+│   │   │       ├── newest_books_list_view_item.dart
+│   │   │       └── newest_book_list_view.dart
+│   │
 │   ├── details/
 │   │   └── presentation/
 │   │       ├── views/
 │   │       │   └── details_view.dart
 │   │       └── widgets/
 │   │           └── details_view_body.dart
-│   ├── home/
+│   │
+│   ├── search/
 │   │   ├── data/
-│   │   │   └── models/
-│   │   │       └── book_model/
-│   │   │           └── book_model.dart
 │   │   │   └── repos/
-│   │   │       └── home_repo_implement.dart
+│   │   │       └── search_repo_implement.dart
 │   │   └── presentation/
 │   │       ├── manager/
-│   │       │   ├── featured_books_cubit/
-│   │       │   │   └── featured_books_cubit.dart
-│   │       │   └── newest_books_cubit/
-│   │       │       └── newest_books_cubit.dart
-│   │       └── views/
-│   │           └── home_view.dart
+│   │       │   └── search_book_cubit/
+│   │       │       └── search_book_cubit.dart
+│   │       ├── views/
+│   │       │   └── search_view.dart
 │   │       └── widgets/
-│   │           ├── custom_app_bar.dart
-│   │           ├── custom_book_image.dart
-│   │           ├── newest_book_list_view.dart
-│   │           └── newest_books_list_view_item.dart
+│   │           ├── search_result_list_view.dart
+│   │           └── search_result_list_view_item.dart
+│   │
 │   └── splash/
 │       └── presentation/
 │           └── views/
 │               └── splash_view.dart
 │
-├── constants.dart
-├── main.dart
+├── main.dart                 # App entry point
 │
 assets/
-└── images/
+└── images/                   # App images and icons
     └── Frame.png
 ```
 
-- **core/**: Shared utilities and widgets.
-- **features/**: Feature-based folders (details, home, splash) with their own data, presentation, and widgets.
-- **assets/**: Images and other static resources.
-- **main.dart**: App entry point.
+**Key Points:**
+- **core/**: Common utilities and widgets used across features.
+- **features/**: Each feature is isolated with its own data and presentation layers.
+- **presentation/manager/**: State management (Cubit/BLoC).
+- **presentation/views/**: Screens/pages.
+- **presentation/widgets/**: UI components for each feature.
+- **assets/**: Static resources.
 
+This structure is scalable and easy to maintain as your app grows.
