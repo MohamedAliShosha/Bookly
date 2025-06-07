@@ -47,6 +47,8 @@ class NewestBookListViewItem extends StatelessWidget {
                     height: 3,
                   ),
                   Text(
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
                     bookModel.volumeInfo.authors![0],
                     style: Styles.textStyle14.copyWith(
                         fontFamily: GoogleFonts.ruslanDisplay().fontFamily),
