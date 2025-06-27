@@ -1,4 +1,4 @@
-# 📚 Book Store App
+# 📚 Gramaz Book Store
 
 A modern mobile app for discovering and exploring books, featuring:
 
