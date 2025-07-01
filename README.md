@@ -8,13 +8,38 @@ A modern mobile app for discovering and exploring books, featuring:
 
 📖 Detailed book information
 
+🔍 Powerful search functionality
+
+<p align="center">
+  <img src="Assets/screenShots/all_view.jpg" alt="App Overview" width="800"/>
+</p>
+
 ## 🎨 Screens
 
 ⚡ Splash: App logo + loading animation
 
-🏠 Home	Sections: "For You" (personalized books) + "Newest Books"
+<p align="center">
+  <img src="Assets/screenShots/splash_view.jpg" alt="App Overview" width="800"/>
+</p>
 
-📖 Details	Full book info: cover, title, author, description, price, preview button
+🏠 Home: "For You" (personalized books) + "Newest Books"
+
+<p align="center">
+  <img src="Assets/screenShots/home_view.jpg" alt="App Overview" width="800"/>
+</p>
+
+📖 Details Full book info: cover, title, author, description, price, preview button
+
+<p align="center">
+  <img src="Assets/screenShots/details_view.jpg" alt="App Overview" width="800"/>
+</p>
+
+🔍 Search: Easily search for books by category, This helps users quickly discover specific books from the vast collection without browsing manually. 
+
+<p align="center">
+  <img src="Assets/screenShots/search_view.jpg" alt="App Overview" width="800"/>
+</p>
+
 
 ## 🛠️ Tech Stack
 
