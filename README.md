@@ -11,7 +11,7 @@ A modern mobile app for discovering and exploring books, featuring:
 🔍 Powerful search functionality
 
 <p align="center">
-  <img src="Assets/screenShots/all_view.jpg" alt="App Overview" width="800"/>
+  <img src="Assets/screenShots/Gramaz_all_views.png" alt="App Overview" width="800"/>
 </p>
 
 ## 🎨 Screens
@@ -19,25 +19,25 @@ A modern mobile app for discovering and exploring books, featuring:
 ⚡ Splash: App logo + loading animation
 
 <p align="center">
-  <img src="Assets/screenShots/splash_view.jpg" alt="App Overview" width="800"/>
+  <img src="Assets/screenShots/Splash_view.png" alt="App Overview" width="800"/>
 </p>
 
 🏠 Home: "For You" (personalized books) + "Newest Books"
 
 <p align="center">
-  <img src="Assets/screenShots/home_view.jpg" alt="App Overview" width="800"/>
+  <img src="Assets/screenShots/Home_view.png" alt="App Overview" width="800"/>
 </p>
 
 📖 Details Full book info: cover, title, author, description, price, preview button
 
 <p align="center">
-  <img src="Assets/screenShots/details_view.jpg" alt="App Overview" width="800"/>
+  <img src="Assets/screenShots/Details_view.png" alt="App Overview" width="800"/>
 </p>
 
 🔍 Search: Easily search for books by category, This helps users quickly discover specific books from the vast collection without browsing manually. 
 
 <p align="center">
-  <img src="Assets/screenShots/search_view.jpg" alt="App Overview" width="800"/>
+  <img src="Assets/screenShots/Search_view.png" alt="App Overview" width="800"/>
 </p>
 
 
