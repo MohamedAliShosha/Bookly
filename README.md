@@ -51,7 +51,7 @@ A modern mobile app for discovering and exploring books, featuring:
 - API: [Rest API]
 
 📦 Dependencies
-- flutter_bloc / font_awesome_flutter / get_it / go_router / google_fonts / url_launcher
+- `flutter_bloc` / `font_awesome_flutter` / `get_it` / `go_router` / `google_fonts` / `url_launcher`
 
 ## 🏗️ Architecture
 - 🧩 MVVM pattern
