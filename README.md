@@ -7,7 +7,7 @@ A modern mobile app for discovering and exploring books, featuring:
 - 📖 Detailed book information
 - 🔍 Powerful search functionality
 
-<p align="left">
+<p align="center">
   <img src="Assets/screenShots/Gramaz_all_views.png" alt="App Overview" width="800"/>
 </p>
 
