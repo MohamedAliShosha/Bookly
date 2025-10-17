@@ -43,6 +43,7 @@ class BookStore extends StatelessWidget {
 }
 
 void main() {
+  // Setting up the service locator
   setUpServiceLocator();
   runApp(
     const BookStore(),
