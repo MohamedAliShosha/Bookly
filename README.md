@@ -2,42 +2,65 @@
 
 A modern mobile app for discovering and exploring books, featuring:
 
-✨ Personalized recommendations
+- ✨ Personalized recommendations
+- 🆕 Newest releases
+- 📖 Detailed book information
+- 🔍 Powerful search functionality
 
-🆕 Newest releases
-
-📖 Detailed book information
-
-🔍 Powerful search functionality
-
-<p align="center">
+<p align="left">
   <img src="Assets/screenShots/Gramaz_all_views.png" alt="App Overview" width="800"/>
 </p>
 
-## 🎨 Screens
+## 🎨 Views
 
-⚡ Splash: App logo + loading animation
+🖼️ 1. Splash View:
+- Displays the app logo (“Gramaz Book Store”).
+- Shows tagline: “Read Free Books”.
+- Acts as an intro screen before navigating to the main home view.
 
-<p align="center">
-  <img src="Assets/screenShots/Splash_view.png" alt="App Overview" width="800"/>
+<p align="left">
+  <img src="Assets/screenShots/Splash_view.png" alt="App Overview" height="800"/>
 </p>
 
-🏠 Home: "For You" (personalized books) + "Newest Books"
+##
 
-<p align="center">
-  <img src="Assets/screenShots/Home_view.png" alt="App Overview" width="800"/>
+🏠 2. Home View:
+- Top App Bar: shows the Gramaz logo and a search icon.
+- Section “For You”: horizontally scrollable list of recommended books with cover images and titles.
+- Section “Newest Books”: vertically scrollable list of recently added books with truncated titles and price tags (“Free”).
+- Dark theme consistent with splash screen colors.
+
+<p align="left">
+  <img src="Assets/screenShots/Home_view.png" alt="App Overview" height="800"/>
 </p>
 
-📖 Details Full book info: cover, title, author, description, price, preview button
+##
 
-<p align="center">
-  <img src="Assets/screenShots/Details_view.png" alt="App Overview" width="800"/>
+📖 3. Book Details View:
+- Shows book cover image at the top.
+- Displays book title and author name below.
+- Contains a brief book description giving an overview of the content.
+- Bottom has two buttons:
+- Free (possibly for reading)
+- Preview (to view a sample).
+  
+<p align="left">
+  <img src="Assets/screenShots/Details_view.png" alt="App Overview" height="800"/>
 </p>
 
-🔍 Search: Easily search for books by category, This helps users quickly discover specific books from the vast collection without browsing manually. 
+##
 
-<p align="center">
-  <img src="Assets/screenShots/Search_view.png" alt="App Overview" width="800"/>
+🔍 4. Search Results View discover specific books from the vast collection:
+- Search bar at the top labeled “Search Books by Category.”
+- Displays search results list with each item showing:
+ - Book cover image.
+ - Book title (e.g., Popular Science).
+ - Author info (or “No Author”).
+ - Price label (“Free”).
+
+
+<p align="left">
+  <img src="Assets/screenShots/Search_view.png" alt="App Overview" height="800"/>
 </p>
 
 
