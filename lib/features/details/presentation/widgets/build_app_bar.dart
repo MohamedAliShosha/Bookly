@@ -1,4 +1,4 @@
-import 'package:book_store_app/core/utils/colors_manager.dart';
+import '../../../../core/utils/colors_manager.dart';
 import 'package:flutter/material.dart';
 
 AppBar buildAppBar(BuildContext context,

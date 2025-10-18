@@ -1,4 +1,4 @@
-import 'package:book_store_app/features/details/presentation/widgets/build_app_bar.dart';
+import '../widgets/build_app_bar.dart';
 
 import '../widgets/book_details_view_body.dart';
 import '../../../home/data/models/book_model/book_model.dart';
