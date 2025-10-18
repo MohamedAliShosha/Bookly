@@ -1,5 +1,5 @@
-import 'package:book_store_app/core/utils/app_router.dart';
-import 'package:book_store_app/core/utils/assets_data.dart';
+import '../../../../core/utils/app_router.dart';
+import '../../../../core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

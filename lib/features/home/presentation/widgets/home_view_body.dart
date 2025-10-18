@@ -1,7 +1,7 @@
-import 'package:book_store_app/core/utils/styles.dart';
-import 'package:book_store_app/features/home/presentation/widgets/custom_app_bar.dart';
-import 'package:book_store_app/features/home/presentation/widgets/featured_books_list_view.dart';
-import 'package:book_store_app/features/home/presentation/widgets/newest_book_list_view.dart';
+import '../../../../core/utils/styles.dart';
+import 'custom_app_bar.dart';
+import 'featured_books_list_view.dart';
+import 'newest_book_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

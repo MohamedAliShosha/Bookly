@@ -1,6 +1,6 @@
-import 'package:book_store_app/core/utils/styles.dart';
-import 'package:book_store_app/features/home/data/models/book_model/book_model.dart';
-import 'package:book_store_app/features/search/presentation/widgets/custom_book_image2.dart';
+import '../../../../core/utils/styles.dart';
+import '../../../home/data/models/book_model/book_model.dart';
+import 'custom_book_image2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

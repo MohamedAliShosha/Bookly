@@ -1,5 +1,5 @@
-import 'package:book_store_app/core/utils/colors_manager.dart';
-import 'package:book_store_app/features/search/presentation/manager/SearchBookCubit/search_book_cubit.dart';
+import '../../../../core/utils/colors_manager.dart';
+import '../manager/SearchBookCubit/search_book_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,14 +12,14 @@ class CustomSearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       style: const TextStyle(
-        color: ColorsManager.kYellowColor,
+        color: ColorsManager.kSecondaryColor,
       ),
       controller: _searchController,
-      cursorColor: ColorsManager.kYellowColor,
+      cursorColor: ColorsManager.kSecondaryColor,
       decoration: InputDecoration(
         hintText: 'Search Books by Category',
         hintStyle: TextStyle(
-          color: ColorsManager.kYellowColor.withOpacity(0.5),
+          color: ColorsManager.kSecondaryColor.withOpacity(0.5),
         ),
         suffixIcon: IconButton(
           onPressed: () {
@@ -36,7 +36,7 @@ class CustomSearchTextField extends StatelessWidget {
           },
           icon: const Icon(
             Icons.search,
-            color: ColorsManager.kYellowColor,
+            color: ColorsManager.kSecondaryColor,
           ),
         ),
         focusedBorder: focusedBorder(),
@@ -48,7 +48,7 @@ class CustomSearchTextField extends StatelessWidget {
   OutlineInputBorder enabledBorder() {
     return const OutlineInputBorder(
       borderSide: BorderSide(
-        color: ColorsManager.kYellowColor,
+        color: ColorsManager.kSecondaryColor,
       ),
     );
   }
@@ -56,7 +56,7 @@ class CustomSearchTextField extends StatelessWidget {
   OutlineInputBorder focusedBorder() {
     return const OutlineInputBorder(
       borderSide: BorderSide(
-        color: ColorsManager.kYellowColor,
+        color: ColorsManager.kSecondaryColor,
       ),
     );
   }

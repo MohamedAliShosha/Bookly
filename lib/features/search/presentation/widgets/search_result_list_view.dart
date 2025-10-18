@@ -1,9 +1,9 @@
-import 'package:book_store_app/core/utils/app_router.dart';
-import 'package:book_store_app/core/utils/styles.dart';
-import 'package:book_store_app/core/widgets/custom_error_widget.dart';
-import 'package:book_store_app/core/widgets/custom_loading_indicator.dart';
-import 'package:book_store_app/features/search/presentation/manager/SearchBookCubit/search_book_cubit.dart';
-import 'package:book_store_app/features/search/presentation/widgets/search_result_list_view_item.dart';
+import '../../../../core/utils/app_router.dart';
+import '../../../../core/utils/styles.dart';
+import '../../../../core/widgets/custom_error_widget.dart';
+import '../../../../core/widgets/custom_loading_indicator.dart';
+import '../manager/SearchBookCubit/search_book_cubit.dart';
+import 'search_result_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
