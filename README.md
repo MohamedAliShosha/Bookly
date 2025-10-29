@@ -7,7 +7,7 @@ A modern mobile app for discovering and exploring books, featuring:
 - 📖 Detailed book information
 - 🔍 Powerful search functionality
 
-<p align="left">
+<p align="center">
   <img src="Assets/screenShots/Gramaz_all_views.png" alt="App Overview" width="800"/>
 </p>
 
@@ -82,62 +82,40 @@ A modern mobile app for discovering and exploring books, featuring:
 lib/
 │
 ├── core/
-│   ├── utils/                # App-wide utilities (router, styles, service locator, etc.)
-│   ├── widgets/              # Shared/reusable widgets (loading, error, etc.)
+│   ├── utils/                # App-wide utilities (router, styles, helpers, etc.)
+│   ├── widgets/              # Shared/reusable UI components
 │
 ├── features/
-│   ├── home/
-│   │   ├── data/             # Data layer: models, repositories, data sources
+│   ├── home/                 
+│   │   ├── data/             # Data layer (models, repositories, data sources)
 │   │   │   ├── models/
-│   │   │   │   └── book_model/
-│   │   │   │       └── book_model.dart
 │   │   │   └── repos/
-│   │   │       └── home_repo_implement.dart
-│   │   ├── presentation/     # UI layer: cubits, views, widgets
-│   │   │   ├── manager/
-│   │   │   │   ├── featured_books_cubit/
-│   │   │   │   │   └── featured_books_cubit.dart
-│   │   │   │   └── newest_books_cubit/
-│   │   │   │       └── newest_books_cubit.dart
-│   │   │   ├── views/
-│   │   │   │   └── home_view.dart
-│   │   │   └── widgets/
-│   │   │       ├── custom_app_bar.dart
-│   │   │       ├── custom_book_image.dart
-│   │   │       ├── newest_books_list_view_item.dart
-│   │   │       └── newest_book_list_view.dart
+│   │   └── presentation/     # UI layer (cubits, views, widgets)
+│   │       ├── manager/
+│   │       ├── views/
+│   │       └── widgets/
 │   │
 │   ├── details/
 │   │   └── presentation/
 │   │       ├── views/
-│   │       │   └── details_view.dart
 │   │       └── widgets/
-│   │           └── details_view_body.dart
 │   │
 │   ├── search/
 │   │   ├── data/
 │   │   │   └── repos/
-│   │   │       └── search_repo_implement.dart
 │   │   └── presentation/
 │   │       ├── manager/
-│   │       │   └── search_book_cubit/
-│   │       │       └── search_book_cubit.dart
 │   │       ├── views/
-│   │       │   └── search_view.dart
 │   │       └── widgets/
-│   │           ├── search_result_list_view.dart
-│   │           └── search_result_list_view_item.dart
 │   │
 │   └── splash/
 │       └── presentation/
 │           └── views/
-│               └── splash_view.dart
 │
 ├── main.dart                 # App entry point
 │
 assets/
 └── images/                   # App images and icons
-    └── Frame.png
 ```
 
 **Key Points:**
