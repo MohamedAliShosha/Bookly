@@ -12,7 +12,7 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  setupServiceLocator();
+  setUpGetIt();
   runApp(const Bookly());
 }
 
