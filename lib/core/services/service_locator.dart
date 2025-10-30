@@ -1,7 +1,7 @@
 import '../../Features/home/data/repos/home_repo_impl.dart';
 import '../../Features/search/data/repos/seach_repo_implement.dart';
 import '../../Features/search/data/repos/search_repo.dart';
-import '../services/api_service.dart';
+import 'api_service.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 

@@ -8,7 +8,7 @@ import '../../Features/home/data/repos/home_repo_impl.dart';
 import '../../Features/home/presentation/manger/smilar_books_cubit/similar_books_cubit.dart';
 import '../../Features/home/presentation/views/book_details_view.dart';
 import '../../Features/home/presentation/views/home_view.dart';
-import 'service_locator.dart';
+import '../services/service_locator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

@@ -3,7 +3,7 @@ import 'Features/home/presentation/manger/featured_books_cubit/featured_books_cu
 import 'Features/home/presentation/manger/newest_books_cubit/newset_books_cubit.dart';
 import 'constants.dart';
 import 'core/utils/app_router.dart';
-import 'core/utils/service_locator.dart';
+import 'core/services/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

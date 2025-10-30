@@ -1,5 +1,5 @@
 import '../../../data/models/book_model/book_model.dart';
-import '../../../../../core/utils/function/launch_url.dart';
+import '../../../../../core/function/launch_url.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
