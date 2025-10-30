@@ -1,4 +1,4 @@
-# 📚 Gramaz Book Store
+# 📚 Bookly – Read Free Books
 
 A modern mobile app for discovering and exploring books, featuring:
 
@@ -8,59 +8,56 @@ A modern mobile app for discovering and exploring books, featuring:
 - 🔍 Powerful search functionality
 
 <p align="center">
-  <img src="Assets/screenShots/Gramaz_all_views.png" alt="App Overview" width="800"/>
+  <img src="Assets/screenShots/Bookly_all_view.png" alt="App Overview" width="800"/>
 </p>
 
 ## 🎨 Views
 
 🖼️ 1. Splash View:
-- Displays the app logo (“Gramaz Book Store”).
-- Shows tagline: “Read Free Books”.
-- Acts as an intro screen before navigating to the main home view.
+- Displays the app logo “BOOKLY”.
+- Shows tagline “Read Free Books.”
+- Acts as an the app’s introductory screen before navigating to the main home view.
 
 <p align="left">
-  <img src="Assets/screenShots/Splash_view.png" alt="App Overview" height="800"/>
+  <img src="Assets/screenShots/Bookly_splash.png" alt="App Overview" height="800"/>
 </p>
 
 ##
 
 🏠 2. Home View:
-- Top App Bar: shows the Gramaz logo and a search icon.
-- Section “For You”: horizontally scrollable list of recommended books with cover images and titles.
-- Section “Newest Books”: vertically scrollable list of recently added books with truncated titles and price tags (“Free”).
-- Dark theme consistent with splash screen colors.
+- Top App Bar: displays the Bookly logo and a search icon.
+- Newest Books Section: vertically scrollable list of recently added books with their titles and “Free” price labels.
+- Recommended Books Carousel: horizontally scrollable cards displaying book covers and titles.
+- Uses a dark minimalist theme consistent with the splash view.
 
 <p align="left">
-  <img src="Assets/screenShots/Home_view.png" alt="App Overview" height="800"/>
+  <img src="Assets/screenShots/Bookly_home.png" alt="App Overview" height="800"/>
 </p>
 
 ##
 
 📖 3. Book Details View:
-- Shows book cover image at the top.
-- Displays book title and author name below.
-- Contains a brief book description giving an overview of the content.
-- Bottom has two buttons:
-- Free (possibly for reading)
-- Preview (to view a sample).
+- Displays the book cover, title, and author name.
+- Shows the book price (e.g., “Free”) and a Preview button to read a sample.
+- Includes a “You can also like” section suggesting related books.
   
 <p align="left">
-  <img src="Assets/screenShots/Details_view.png" alt="App Overview" height="800"/>
+  <img src="Assets/screenShots/Bookly_details.png" alt="App Overview" height="800"/>
 </p>
 
 ##
 
-🔍 4. Search Results View discover specific books from the vast collection:
-- Search bar at the top labeled “Search Books by Category.”
-- Displays search results list with each item showing:
+🔍 4. Search Results View
+- Features a search bar at the top labeled “Search for books by Category.”
+- Displays a scrollable list of results with each item showing:
  - Book cover image.
- - Book title (e.g., Popular Science).
+ - Book title.
  - Author info (or “No Author”).
- - Price label (“Free”).
+ - Price label (e.g., “Free”)
 
 
 <p align="left">
-  <img src="Assets/screenShots/Search_view.png" alt="App Overview" height="800"/>
+  <img src="Assets/screenShots/Bookly_search.png" alt="App Overview" height="800"/>
 </p>
 
 
@@ -82,8 +79,11 @@ A modern mobile app for discovering and exploring books, featuring:
 lib/
 │
 ├── core/
-│   ├── utils/                # App-wide utilities (router, styles, helpers, etc.)
-│   ├── widgets/              # Shared/reusable UI components
+│   ├── errors/               # Custom exceptions, failures, and error handling logic
+│   ├── services/             # App-wide services (API, local storage, Firebase, etc.)
+│   ├── functions/            # General helper functions (formatting, validation, dialogs, etc.)
+│   ├── utils/                # Global utilities (router, constants, theme, styles, etc.)
+│   ├── widgets/              # Shared/reusable UI components (buttons, loaders, error widgets)
 │
 ├── features/
 │   ├── home/                 
@@ -113,6 +113,7 @@ lib/
 │           └── views/
 │
 ├── main.dart                 # App entry point
+│
 │
 assets/
 └── images/                   # App images and icons
