@@ -13,10 +13,10 @@ A modern mobile app for discovering and exploring books, featuring:
 
 ## 🎨 Views
 
-🖼️ Splash View:
+🖼️ **Splash View:**
 - Displays the app logo “BOOKLY”.
 - Shows tagline “Read Free Books.”
-- Acts as an the app’s introductory screen before navigating to the main home view.
+- Acts as the app’s introductory screen before navigating to the main home view.
 
 <p align="left">
   <img src="assets/screenShots/Bookly_splash.png" alt="App Overview" height="800"/>
@@ -24,7 +24,7 @@ A modern mobile app for discovering and exploring books, featuring:
 
 ##
 
-🏠 Home View:
+🏠 **Home View:**
 - Top App Bar: displays the Bookly logo and a search icon.
 - Newest Books Section: vertically scrollable list of recently added books with their titles and “Free” price labels.
 - Recommended Books Carousel: horizontally scrollable cards displaying book covers and titles.
@@ -36,7 +36,7 @@ A modern mobile app for discovering and exploring books, featuring:
 
 ##
 
-📖 Book Details View:
+📖 **Book Details View:**
 - Displays the book cover, title, and author name.
 - Shows the book price (e.g., “Free”) and a Preview button to read a sample.
 - Includes a “You can also like” section suggesting related books.
@@ -47,7 +47,7 @@ A modern mobile app for discovering and exploring books, featuring:
 
 ##
 
-🔍 Search Results View
+🔍 **Search Results View:**
 - Features a search bar at the top labeled “Search for books by Category.”
 - Displays a scrollable list of results with each item showing:
  - Book cover image.
