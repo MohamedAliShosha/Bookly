@@ -55,21 +55,23 @@ class BookListViewItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Free',
-                        style: Styles.textStyle20.copyWith(
-                          fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Text(
+                          'Free',
+                          style: Styles.textStyle20.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      const Spacer(),
-                      BookRating(
-                        rating:
-                            bookModel.volumeInfo.averageRating?.round() ?? 0,
-                        count: bookModel.volumeInfo.ratingsCount ?? 0,
-                      ),
-                    ],
+                        const Spacer(),
+                        BookRating(
+                          rating:
+                              bookModel.volumeInfo.averageRating?.round() ?? 0,
+                          count: bookModel.volumeInfo.ratingsCount ?? 0,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
