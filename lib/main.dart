@@ -1,3 +1,5 @@
+import 'package:book_store_app/core/utils/simple_bloc_observer.dart';
+
 import 'Features/home/data/repos/home_repo_impl.dart';
 import 'Features/home/presentation/manger/featured_books_cubit/featured_books_cubit.dart';
 import 'Features/home/presentation/manger/newest_books_cubit/newset_books_cubit.dart';
@@ -13,6 +15,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   setUpGetIt();
+  Bloc.observer = SimpleBlocObserver();
   runApp(const Bookly());
 }
 
