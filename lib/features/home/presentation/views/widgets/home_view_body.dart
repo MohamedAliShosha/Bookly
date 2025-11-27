@@ -1,8 +1,9 @@
-import '../../../../../core/utils/styles.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/featured_books_list_view_bloc_consumer.dart';
+import 'package:book_store_app/core/utils/styles.dart';
+
 import 'package:flutter/material.dart';
-import 'best_seller_list_view.dart';
+import 'newest_books_list_view.dart';
 import 'custom_app_bar.dart';
-import 'featured_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -10,21 +11,19 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
-      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
-                child: CustomAppBar(),
-              ),
-              FeaturedBooksListView(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
+                  child: CustomAppBar()),
+              FeaturedBooksListViewBlocConsumer(),
               SizedBox(
-                height: 30,
+                height: 50,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
@@ -34,7 +33,7 @@ class HomeViewBody extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 20,
               ),
             ],
           ),
@@ -42,7 +41,7 @@ class HomeViewBody extends StatelessWidget {
         SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
-            child: BestSellerListView(),
+            child: NewestBooksListView(),
           ),
         ),
       ],
