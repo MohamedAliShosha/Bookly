@@ -1,7 +1,7 @@
 import '../../../../../Core/utils/styles.dart';
 import '../../../../../Core/widgets/custom_error_widget.dart';
 import '../../../../../Core/widgets/custom_loading_indicator.dart';
-import '../../../../home/presentation/views/widgets/custom_book_item.dart';
+import '../../../../home/presentation/views/widgets/custom_book_image.dart';
 import '../../search_cubit/search_cubit.dart';
 import '../../search_cubit/search_state.dart';
 import '../../../../../constants.dart';
@@ -44,7 +44,7 @@ class SearchResultListView extends StatelessWidget {
                             );
                           },
                           child: CustomBookImage(
-                            imageUrl: state
+                            image: state
                                 .books[index].volumeInfo.imageLinks!.thumbnail,
                           ),
                         ),

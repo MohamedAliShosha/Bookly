@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class SimilarBooksListView extends StatelessWidget {
   const SimilarBooksListView({super.key});
@@ -32,7 +32,7 @@ class SimilarBooksListView extends StatelessWidget {
                         );
                       },
                       child: CustomBookImage(
-                        imageUrl: state.books[index].volumeInfo.imageLinks
+                        image: state.books[index].volumeInfo.imageLinks
                                 ?.thumbnail ??
                             '',
                       ),
