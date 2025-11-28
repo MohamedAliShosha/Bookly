@@ -11,11 +11,23 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
 
   final HomeRepo homeRepo;
 
-  Future<void> fetchSimilarBooks({required String category}) async {
-    emit(SimilarBooksLoading());
-    var result = await homeRepo.fetchSimilarBooks(category: category);
+  Future<void> fetchSimilarBooks(
+      {required String category, int pageNumber = 0}) async {
+    if (pageNumber == 0) {
+      emit(SimilarBooksLoading());
+    } else {
+      emit(SimilarBooksPaginationLoading());
+    }
+    var result = await homeRepo.fetchSimilarBooks(
+      category: category,
+      pageNumber: pageNumber,
+    );
     result.fold((failure) {
-      emit(SimilarBooksFailure(failure.errorMessage));
+      if (pageNumber == 0) {
+        emit(SimilarBooksFailure((failure.errorMessage)));
+      } else {
+        emit(SimilarBooksPaginationFailure(failure.errorMessage));
+      }
     }, (books) {
       emit(SimilarBooksSuccess(books));
     });

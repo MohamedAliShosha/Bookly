@@ -1,51 +1,103 @@
-import '../../manger/smilar_books_cubit/similar_books_cubit.dart';
-import '../../../../../core/utils/app_router.dart';
-import '../../../../../core/widgets/custom_error_widget.dart';
-import '../../../../../core/widgets/custom_loading_indicator.dart';
+import 'package:book_store_app/Features/home/data/models/book_model/book_model.dart';
+import 'package:book_store_app/Features/home/presentation/manger/smilar_books_cubit/similar_books_cubit.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/custom_book_item.dart';
+import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import 'custom_book_item.dart';
+class SimilarBooksListView extends StatefulWidget {
+  const SimilarBooksListView({
+    super.key,
+    required this.books,
+  });
 
-class SimilarBooksListView extends StatelessWidget {
-  const SimilarBooksListView({super.key});
+  final List<BookModel> books;
+
+  @override
+  State<SimilarBooksListView> createState() => _SimilarBooksListViewState();
+}
+
+class _SimilarBooksListViewState extends State<SimilarBooksListView> {
+  // Scroll controller used to monitor the scrolling position in the ListView
+  late final ScrollController _scrollController;
+  var nextPage = 1; // The next page number to request from the API
+
+  // A flag to prevent triggering multiple loading operations at once
+  var isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Initialize the ScrollController when the state is created
+    _scrollController = ScrollController();
+    // Add a listener to react whenever the user scrolls
+    _scrollController.addListener(scrollListener);
+  }
+
+  // Function executed every time the scroll position changes
+  void scrollListener() async {
+    // The current scroll position in pixels
+    var currentPosition = _scrollController.position.pixels;
+    // The maximum scroll extent (the furthest point the list can scroll to)
+    var maxScrollExtent = _scrollController.position.maxScrollExtent;
+    // If the user has reached 70% of the scrollable area
+    if (currentPosition >= 0.7 * maxScrollExtent) {
+      // Only load more data if no loading operation is currently happening
+      if (!isLoading) {
+        isLoading =
+            true; /* 
+            - Now loading starts
+            - Prevents the block from triggering again
+*/
+        // Call the Cubit to fetch the next page of books from the API
+
+        await BlocProvider.of<SimilarBooksCubit>(context).fetchSimilarBooks(
+          category: widget.books[0].volumeInfo.categories?[0] ?? '',
+          pageNumber: nextPage++, // Pass the page number, then increment it
+        );
+        isLoading =
+            false; /*
+            - → Ready to load next page when user scrolls again
+            - → Next scroll: if(!false) → true
+            - And the cycle repeats.
+             */
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SimilarBooksCubit, SimilarBooksState>(
-      builder: (context, state) {
-        if (state is SimilarBooksSuccess) {
-          return SizedBox(
-            height: MediaQuery.of(context).size.height * .15,
-            child: ListView.builder(
-                itemCount: state.books.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
-                    child: GestureDetector(
-                      onTap: () {
-                        GoRouter.of(context).push(
-                          AppRouter.kBookDetailsView,
-                          extra: state.books[index],
-                        );
-                      },
-                      child: CustomBookItem(
-                        image: state.books[index].volumeInfo.imageLinks
-                                ?.thumbnail ??
-                            '',
-                      ),
-                    ),
-                  );
-                }),
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * .15,
+      child: ListView.builder(
+        controller: _scrollController,
+        itemCount: widget.books.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: GestureDetector(
+              onTap: () {
+                GoRouter.of(context).push(
+                  AppRouter.kBookDetailsView,
+                  extra: widget.books[index],
+                );
+              },
+              child: CustomBookItem(
+                image:
+                    widget.books[index].volumeInfo.imageLinks?.thumbnail ?? '',
+              ),
+            ),
           );
-        } else if (state is SimilarBooksFailure) {
-          return CustomErrorWidget(errorMessage: state.errMessage);
-        } else {
-          return const CustomLoadingIndicator();
-        }
-      },
+        },
+      ),
     );
   }
 }

@@ -15,6 +15,12 @@ class SimilarBooksFailure extends SimilarBooksState {
   const SimilarBooksFailure(this.errMessage);
 }
 
+class SimilarBooksPaginationFailure extends SimilarBooksState {
+  final String errMessage;
+
+  const SimilarBooksPaginationFailure(this.errMessage);
+}
+
 class SimilarBooksSuccess extends SimilarBooksState {
   final List<BookModel> books;
 
@@ -22,3 +28,5 @@ class SimilarBooksSuccess extends SimilarBooksState {
 }
 
 class SimilarBooksLoading extends SimilarBooksState {}
+
+class SimilarBooksPaginationLoading extends SimilarBooksState {}
