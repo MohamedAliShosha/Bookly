@@ -1,5 +1,5 @@
 import '../../../data/models/book_model/book_model.dart';
-import 'custom_book_image.dart';
+import 'custom_book_item.dart';
 import '../../../../../core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -25,7 +25,7 @@ class NewestBooksListViewItem extends StatelessWidget {
         height: 125,
         child: Row(
           children: [
-            CustomBookImage(
+            CustomBookItem(
                 image: bookModel.volumeInfo.imageLinks?.thumbnail ?? ''),
             const SizedBox(
               width: 30,
@@ -49,7 +49,7 @@ class NewestBooksListViewItem extends StatelessWidget {
                     height: 3,
                   ),
                   Text(
-                    bookModel.volumeInfo.authors![0],
+                    bookModel.volumeInfo.authors?.firstOrNull ?? 'Unknown',
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(

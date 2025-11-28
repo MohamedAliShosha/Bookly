@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
-import 'custom_book_image.dart';
+import 'custom_book_item.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key, required this.book});
@@ -20,7 +20,7 @@ class BookDetailsSection extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: width * .2,
           ),
-          child: CustomBookImage(
+          child: CustomBookItem(
             image: book.volumeInfo.imageLinks?.thumbnail ?? '',
           ),
         ),
