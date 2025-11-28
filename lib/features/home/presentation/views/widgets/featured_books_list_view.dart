@@ -6,7 +6,7 @@ import '../../manger/featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'custom_book_image.dart';
+import 'custom_book_item.dart';
 
 class FeaturedBooksListView extends StatefulWidget {
   const FeaturedBooksListView({super.key, required this.books});
@@ -88,7 +88,7 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
                   extra: widget.books[index],
                 );
               },
-              child: CustomBookImage(
+              child: CustomBookItem(
                 image:
                     widget.books[index].volumeInfo.imageLinks?.thumbnail ?? '',
               ),

@@ -21,7 +21,7 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
       if (pageNumber == 0) {
         emit(FeaturedBooksFailure(failure.errorMessage));
       } else {
-        FeaturedBooksPaginationFailure(failure.errorMessage);
+        emit(FeaturedBooksPaginationFailure(failure.errorMessage));
       }
     }, (books) {
       emit(FeaturedBooksSuccess(books));

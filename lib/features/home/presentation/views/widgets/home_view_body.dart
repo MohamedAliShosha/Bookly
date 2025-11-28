@@ -1,8 +1,8 @@
 import 'package:book_store_app/Features/home/presentation/views/widgets/featured_books_list_view_bloc_consumer.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/newest_books_list_view_bloc_consumer.dart';
 import 'package:book_store_app/core/utils/styles.dart';
 
 import 'package:flutter/material.dart';
-import 'newest_books_list_view.dart';
 import 'custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -17,10 +17,11 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 30,
-                  ),
-                  child: CustomAppBar()),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30,
+                ),
+                child: CustomAppBar(),
+              ),
               FeaturedBooksListViewBlocConsumer(),
               SizedBox(
                 height: 50,
@@ -41,7 +42,7 @@ class HomeViewBody extends StatelessWidget {
         SliverFillRemaining(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
-            child: NewestBooksListView(),
+            child: NewestBooksListViewBlocConsumer(),
           ),
         ),
       ],
