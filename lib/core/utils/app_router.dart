@@ -1,3 +1,5 @@
+import 'package:book_store_app/Features/auth/login/presentation/view/login_view.dart';
+
 import '../../Features/search/data/repos/search_repo.dart';
 import '../../Features/search/presentation/search_cubit/search_cubit.dart';
 import '../../Features/search/presentation/view/search_view.dart';
@@ -16,6 +18,7 @@ import '../../Features/Splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
+  static const kLoginView = '/loginView';
   static const kBookDetailsView = '/bookDetailsView';
   static const kSearchView = '/searchView';
 
@@ -38,6 +41,10 @@ abstract class AppRouter {
       GoRoute(
         path: kHomeView,
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kLoginView,
+        builder: (context, state) => const LoginView(),
       ),
       GoRoute(
         path: kBookDetailsView,
