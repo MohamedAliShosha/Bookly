@@ -19,7 +19,6 @@ class LoginViewBody extends StatelessWidget {
               color: Colors.white,
             ),
             const SizedBox(height: 25),
-
             // Welcome Text
             const Text(
               "Welcome Back",
@@ -70,7 +69,7 @@ class LoginViewBody extends StatelessWidget {
                 onPressed: () {},
                 child: const Text(
                   "Login",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -83,7 +82,7 @@ class LoginViewBody extends StatelessWidget {
               children: [
                 const Text(
                   "Don’t have an account?",
-                  style: TextStyle(color: Colors.white70, fontSize: 14),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 TextButton(
                   onPressed: () {},
@@ -126,7 +125,7 @@ class CustomTextField extends StatelessWidget {
         filled: true,
         fillColor: Colors.white.withOpacity(.1),
         labelText: label,
-        labelStyle: const TextStyle(color: Colors.white70),
+        labelStyle: const TextStyle(color: Colors.white),
         prefixIcon: Icon(icon, color: Colors.white70),
         enabledBorder: buildEnabledBorder(Colors.grey),
         focusedBorder: buildFocusedBorder(Colors.white),
