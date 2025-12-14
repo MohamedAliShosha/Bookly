@@ -2,7 +2,7 @@ import 'similar_books_section.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../data/models/book_model/book_model.dart';
+import '../../data/models/book_model/book_model.dart';
 import 'books_details_sectioni.dart';
 import 'custom_book_details_app_bar.dart';
 

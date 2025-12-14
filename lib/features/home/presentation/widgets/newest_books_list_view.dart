@@ -1,23 +1,22 @@
 import 'package:book_store_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:book_store_app/core/utils/app_router.dart';
-import 'package:go_router/go_router.dart';
-
-import '../../manger/featured_books_cubit/featured_books_cubit.dart';
+import 'package:book_store_app/Features/home/presentation/manger/newest_books_cubit/newset_books_cubit.dart';
+import 'package:book_store_app/Features/home/presentation/widgets/newest_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'custom_book_item.dart';
-
-class FeaturedBooksListView extends StatefulWidget {
-  const FeaturedBooksListView({super.key, required this.books});
+class NewestBooksListView extends StatefulWidget {
+  const NewestBooksListView({
+    super.key,
+    required this.books,
+  });
 
   final List<BookModel> books;
 
   @override
-  State<FeaturedBooksListView> createState() => _FeaturedBooksListViewState();
+  State<NewestBooksListView> createState() => _NewestBooksListViewState();
 }
 
-class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
+class _NewestBooksListViewState extends State<NewestBooksListView> {
   // Scroll controller used to monitor the scrolling position in the ListView
   late final ScrollController _scrollController;
   var nextPage = 1; // The next page number to request from the API
@@ -51,7 +50,7 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
 */
         // Call the Cubit to fetch the next page of books from the API
 
-        await BlocProvider.of<FeaturedBooksCubit>(context).fetchFeaturedBooks(
+        await BlocProvider.of<NewestBooksCubit>(context).fetchNewestBooks(
           pageNumber: nextPage++, // Pass the page number, then increment it
         );
         isLoading =
@@ -72,30 +71,19 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .3,
-      child: ListView.builder(
-        controller: _scrollController,
-        itemCount: widget.books.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: GestureDetector(
-              onTap: () {
-                GoRouter.of(context).push(
-                  AppRouter.kBookDetailsView,
-                  extra: widget.books[index],
-                );
-              },
-              child: CustomBookItem(
-                image:
-                    widget.books[index].volumeInfo.imageLinks?.thumbnail ?? '',
-              ),
-            ),
-          );
-        },
-      ),
+    return ListView.builder(
+      controller: _scrollController,
+      physics: const BouncingScrollPhysics(),
+      padding: EdgeInsets.zero,
+      itemCount: widget.books.length,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: NewestBooksListViewItem(
+            bookModel: widget.books[index],
+          ),
+        );
+      },
     );
   }
 }

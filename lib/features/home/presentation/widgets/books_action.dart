@@ -1,8 +1,8 @@
-import '../../../data/models/book_model/book_model.dart';
-import '../../../../../core/function/launch_url.dart';
+import '../../data/models/book_model/book_model.dart';
+import '../../../../core/function/launch_url.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/custom_button.dart';
 
 class BooksAction extends StatelessWidget {
   const BooksAction({super.key, required this.bookModel});

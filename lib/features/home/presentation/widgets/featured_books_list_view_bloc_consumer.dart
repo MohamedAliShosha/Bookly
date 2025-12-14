@@ -1,6 +1,6 @@
 import 'package:book_store_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:book_store_app/Features/home/presentation/manger/featured_books_cubit/featured_books_cubit.dart';
-import 'package:book_store_app/Features/home/presentation/views/widgets/featured_books_list_view.dart';
+import 'package:book_store_app/Features/home/presentation/widgets/featured_books_list_view.dart';
 import 'package:book_store_app/core/function/build_error_snack_bar.dart';
 import 'package:book_store_app/core/widgets/custom_error_widget.dart';
 import 'package:flutter/material.dart';

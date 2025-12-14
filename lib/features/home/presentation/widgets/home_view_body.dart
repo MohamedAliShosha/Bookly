@@ -1,5 +1,5 @@
-import 'package:book_store_app/Features/home/presentation/views/widgets/featured_books_list_view_bloc_consumer.dart';
-import 'package:book_store_app/Features/home/presentation/views/widgets/newest_books_list_view_bloc_consumer.dart';
+import 'package:book_store_app/Features/home/presentation/widgets/featured_books_list_view_bloc_consumer.dart';
+import 'package:book_store_app/Features/home/presentation/widgets/newest_books_list_view_bloc_consumer.dart';
 import 'package:book_store_app/core/utils/styles.dart';
 
 import 'package:flutter/material.dart';

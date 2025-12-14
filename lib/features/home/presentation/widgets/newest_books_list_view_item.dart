@@ -1,11 +1,11 @@
-import '../../../data/models/book_model/book_model.dart';
+import '../../data/models/book_model/book_model.dart';
 import 'custom_book_item.dart';
-import '../../../../../core/utils/app_router.dart';
+import '../../../../core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../constants.dart';
-import '../../../../../core/utils/styles.dart';
+import '../../../../constants.dart';
+import '../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 
 class NewestBooksListViewItem extends StatelessWidget {
