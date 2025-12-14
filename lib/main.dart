@@ -40,10 +40,9 @@ class Bookly extends StatelessWidget {
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark().copyWith(
+        theme: ThemeData(
           scaffoldBackgroundColor: kPrimaryColor,
-          textTheme:
-              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+          textTheme: GoogleFonts.montserratTextTheme(ThemeData().textTheme),
         ),
       ),
     );
