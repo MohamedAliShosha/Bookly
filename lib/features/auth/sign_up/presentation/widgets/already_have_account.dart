@@ -2,8 +2,8 @@ import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class DonHaveAccount extends StatelessWidget {
-  const DonHaveAccount({
+class AlreadyHaveAccount extends StatelessWidget {
+  const AlreadyHaveAccount({
     super.key,
   });
 
@@ -13,15 +13,16 @@ class DonHaveAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
-          "Don’t have an account?",
-          style: TextStyle(color: Colors.white, fontSize: 14),
+          "Already have an account?",
+          style: TextStyle(
+              fontWeight: FontWeight.bold, color: Colors.white70, fontSize: 14),
         ),
         GestureDetector(
           onTap: () {
-            GoRouter.of(context).go(AppRouter.kSignUpView);
+            GoRouter.of(context).go(AppRouter.kLoginView);
           },
           child: const Text(
-            "Sign up",
+            "Login",
             style: TextStyle(
               color: Colors.blueAccent,
               fontWeight: FontWeight.bold,

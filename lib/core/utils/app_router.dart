@@ -1,4 +1,5 @@
 import 'package:book_store_app/Features/auth/login/presentation/view/login_view.dart';
+import 'package:book_store_app/Features/auth/sign_up/presentation/views/sign_up_view.dart';
 
 import '../../Features/search/data/repos/search_repo.dart';
 import '../../Features/search/presentation/search_cubit/search_cubit.dart';
@@ -21,6 +22,7 @@ abstract class AppRouter {
   static const kLoginView = '/loginView';
   static const kBookDetailsView = '/bookDetailsView';
   static const kSearchView = '/searchView';
+  static const kSignUpView = '/signUpView';
 
   static final router = GoRouter(
     routes: [
@@ -45,6 +47,10 @@ abstract class AppRouter {
       GoRoute(
         path: kLoginView,
         builder: (context, state) => const LoginView(),
+      ),
+      GoRoute(
+        path: kSignUpView,
+        builder: (context, state) => const SignUpView(),
       ),
       GoRoute(
         path: kBookDetailsView,

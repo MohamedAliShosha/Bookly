@@ -2,7 +2,7 @@ import 'package:book_store_app/core/function/build_enabled_border.dart';
 import 'package:book_store_app/core/function/build_focused_border.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatefulWidget {
+class CustomTextFormField extends StatefulWidget {
   final String label;
   final IconData icon;
   final bool isPassword;
@@ -10,7 +10,7 @@ class CustomTextField extends StatefulWidget {
   final TextEditingController controller;
   final String? Function(String?)? validator;
 
-  const CustomTextField({
+  const CustomTextFormField({
     super.key,
     required this.label,
     required this.icon,
@@ -21,10 +21,10 @@ class CustomTextField extends StatefulWidget {
   });
 
   @override
-  State<CustomTextField> createState() => _CustomTextFieldState();
+  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
 }
 
-class _CustomTextFieldState extends State<CustomTextField> {
+class _CustomTextFormFieldState extends State<CustomTextFormField> {
   // changing fields are written at State object part.
   bool obscureText = true;
   @override

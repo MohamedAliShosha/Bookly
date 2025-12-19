@@ -1,4 +1,5 @@
 import 'package:book_store_app/Features/auth/login/presentation/widgets/custom_text_form_field.dart';
+import 'package:book_store_app/core/widgets/app_button.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +29,7 @@ class _LoginFormState extends State<LoginForm> {
       key: _formKey,
       child: Column(
         children: [
-          CustomTextField(
+          CustomTextFormField(
             validator: (data) {
               if (data == null || data.isEmpty) {
                 return 'This field is required';
@@ -46,7 +47,7 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(height: 20),
 
           // Password Field
-          CustomTextField(
+          CustomTextFormField(
             validator: (data) {
               if (data == null || data.isEmpty) {
                 return 'This field is required';
@@ -63,22 +64,9 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const SizedBox(height: 40),
           // Login Button
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueAccent,
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              onPressed: () {},
-              child: const Text(
-                "Login",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-            ),
+          AppButton(
+            title: "Login",
+            onPressed: () {},
           ),
         ],
       ),
