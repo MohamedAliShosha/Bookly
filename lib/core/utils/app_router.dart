@@ -1,5 +1,12 @@
+import 'package:book_store_app/Features/auth/login/data/repos/login_repo_implement.dart';
+import 'package:book_store_app/Features/auth/login/presentation/manager/login/login_cubit.dart';
 import 'package:book_store_app/Features/auth/login/presentation/view/login_view.dart';
+import 'package:book_store_app/Features/auth/login/service/login_service.dart';
+import 'package:book_store_app/Features/auth/sign_up/data/repos/sign_up_repo_implement.dart';
+import 'package:book_store_app/Features/auth/sign_up/presentation/manager/sign_up/sign_up_cubit.dart';
 import 'package:book_store_app/Features/auth/sign_up/presentation/views/sign_up_view.dart';
+import 'package:book_store_app/Features/auth/sign_up/service/sign_up_service.dart';
+import 'package:dio/dio.dart';
 
 import '../../Features/search/data/repos/search_repo.dart';
 import '../../Features/search/presentation/search_cubit/search_cubit.dart';
@@ -46,11 +53,29 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kLoginView,
-        builder: (context, state) => const LoginView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => LoginCubit(
+            LoginRepoImplement(
+              LoginService(
+                Dio(),
+              ),
+            ),
+          ),
+          child: const LoginView(),
+        ),
       ),
       GoRoute(
         path: kSignUpView,
-        builder: (context, state) => const SignUpView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => SignUpCubit(
+            SignUpRepoImplement(
+              SignUpService(
+                getIt<Dio>(),
+              ),
+            ),
+          ),
+          child: const SignUpView(),
+        ),
       ),
       GoRoute(
         path: kBookDetailsView,

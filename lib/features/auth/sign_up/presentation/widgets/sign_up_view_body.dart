@@ -1,4 +1,4 @@
-import 'package:book_store_app/Features/auth/sign_up/presentation/widgets/already_have_account.dart';
+import 'package:book_store_app/Features/auth/sign_up/presentation/widgets/sign_up_bloc_listener.dart';
 import 'package:book_store_app/Features/auth/sign_up/presentation/widgets/sign_up_form.dart';
 import 'package:flutter/material.dart';
 
@@ -37,8 +37,7 @@ class SignUpViewBody extends StatelessWidget {
             ),
             SizedBox(height: 35),
             SignUpForm(),
-            SizedBox(height: 25),
-            AlreadyHaveAccount(),
+            SignUpBlocListener(),
           ],
         ),
       ),

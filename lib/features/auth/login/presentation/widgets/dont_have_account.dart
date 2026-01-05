@@ -2,8 +2,8 @@ import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class DonHaveAccount extends StatelessWidget {
-  const DonHaveAccount({
+class DontHaveAccount extends StatelessWidget {
+  const DontHaveAccount({
     super.key,
   });
 
@@ -13,7 +13,7 @@ class DonHaveAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
-          "Don’t have an account?",
+          "Don’t have an account? ",
           style: TextStyle(color: Colors.white, fontSize: 14),
         ),
         GestureDetector(

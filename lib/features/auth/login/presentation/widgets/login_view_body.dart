@@ -1,4 +1,4 @@
-import 'package:book_store_app/Features/auth/login/presentation/widgets/dont_have_account.dart';
+import 'package:book_store_app/Features/auth/login/presentation/widgets/login_bloc_listener.dart';
 import 'package:book_store_app/Features/auth/login/presentation/widgets/login_form.dart';
 import 'package:flutter/material.dart';
 
@@ -42,8 +42,7 @@ class LoginViewBody extends StatelessWidget {
             ),
             SizedBox(height: 40),
             LoginForm(),
-            SizedBox(height: 25),
-            DonHaveAccount(),
+            LoginBlocListener()
           ],
         ),
       ),

@@ -1,7 +1,11 @@
+import 'package:book_store_app/Features/auth/login/data/models/login_request_body.dart';
+import 'package:book_store_app/Features/auth/login/presentation/manager/login/login_cubit.dart';
 import 'package:book_store_app/Features/auth/login/presentation/widgets/custom_text_form_field.dart';
+import 'package:book_store_app/Features/auth/login/presentation/widgets/dont_have_account.dart';
 import 'package:book_store_app/core/widgets/app_button.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -29,7 +33,9 @@ class _LoginFormState extends State<LoginForm> {
       key: _formKey,
       child: Column(
         children: [
-          CustomTextFormField(
+          AppTextFormField(
+            prefixIcon: Icons.email_outlined,
+            labelText: "Email",
             validator: (data) {
               if (data == null || data.isEmpty) {
                 return 'This field is required';
@@ -41,13 +47,15 @@ class _LoginFormState extends State<LoginForm> {
             },
             controller: emailController,
             keyboardType: TextInputType.emailAddress,
-            label: "Email",
-            icon: Icons.email_outlined,
+            // label: "Email",
+            // icon: Icons.email_outlined,
           ),
           const SizedBox(height: 20),
 
           // Password Field
-          CustomTextFormField(
+          AppTextFormField(
+            prefixIcon: Icons.lock,
+            labelText: 'Password',
             validator: (data) {
               if (data == null || data.isEmpty) {
                 return 'This field is required';
@@ -58,16 +66,32 @@ class _LoginFormState extends State<LoginForm> {
             },
             controller: passwordController,
             keyboardType: TextInputType.visiblePassword,
-            label: "Password",
-            icon: Icons.lock_outline,
+            // label: "Password",
+            // icon: Icons.lock_outline,
             isPassword: true,
           ),
           const SizedBox(height: 40),
           // Login Button
-          AppButton(
-            title: "Login",
-            onPressed: () {},
+          BlocBuilder<LoginCubit, LoginState>(
+            builder: (context, state) {
+              return AppButton(
+                isLoading: state is LoginLoading,
+                title: "Login",
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    context.read<LoginCubit>().login(
+                          LoginRequestBody(
+                            email: emailController.text.trim(),
+                            password: passwordController.text.trim(),
+                          ),
+                        );
+                  }
+                },
+              );
+            },
           ),
+          const SizedBox(height: 25),
+          const DontHaveAccount(),
         ],
       ),
     );

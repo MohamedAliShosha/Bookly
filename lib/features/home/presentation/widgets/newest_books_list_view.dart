@@ -1,5 +1,5 @@
 import 'package:book_store_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:book_store_app/Features/home/presentation/manger/newest_books_cubit/newset_books_cubit.dart';
+import 'package:book_store_app/Features/home/presentation/manger/newest_books_cubit/new1_cubit/new1_books_cubit.dart';
 import 'package:book_store_app/Features/home/presentation/widgets/newest_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -50,7 +50,7 @@ class _NewestBooksListViewState extends State<NewestBooksListView> {
 */
         // Call the Cubit to fetch the next page of books from the API
 
-        await BlocProvider.of<NewestBooksCubit>(context).fetchNewestBooks(
+        await BlocProvider.of<New1BooksCubit>(context).fetchNewestBooks(
           pageNumber: nextPage++, // Pass the page number, then increment it
         );
         isLoading =

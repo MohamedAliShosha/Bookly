@@ -1,7 +1,13 @@
 import 'package:book_store_app/Features/auth/login/presentation/widgets/custom_text_form_field.dart';
-import 'package:book_store_app/core/widgets/app_button.dart';
+
+import '../../../../../core/widgets/app_button.dart';
+import 'already_have_account.dart';
+
+import '../../data/models/sign_up_request_body.dart';
+import '../manager/sign_up/sign_up_cubit.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -37,9 +43,9 @@ class _SignUpFormState extends State<SignUpForm> {
       child: Column(
         children: [
           // Full Name
-          CustomTextFormField(
-            icon: Icons.person_outline,
-            label: 'Name',
+          AppTextFormField(
+            prefixIcon: Icons.person,
+            labelText: "Name",
             keyboardType: TextInputType.name,
             validator: (data) {
               if (data == null || data.isEmpty) {
@@ -51,9 +57,9 @@ class _SignUpFormState extends State<SignUpForm> {
             isPassword: false,
           ),
           const SizedBox(height: 15),
-          CustomTextFormField(
-            icon: Icons.email_outlined,
-            label: 'Email',
+          AppTextFormField(
+            prefixIcon: Icons.email_outlined,
+            labelText: "Email",
             validator: (data) {
               if (data == null || data.isEmpty) {
                 return 'This field is required';
@@ -69,9 +75,9 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           const SizedBox(height: 15),
           // Email
-          CustomTextFormField(
-            icon: Icons.phone_outlined,
-            label: 'Phone',
+          AppTextFormField(
+            prefixIcon: Icons.phone,
+            labelText: 'Phone',
             keyboardType: TextInputType.phone,
             validator: (data) {
               if (data == null || data.isEmpty) {
@@ -84,9 +90,9 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           const SizedBox(height: 15),
           // Password
-          CustomTextFormField(
-            icon: Icons.lock_outline,
-            label: 'Password',
+          AppTextFormField(
+            prefixIcon: Icons.lock,
+            labelText: 'Password',
             keyboardType: TextInputType.visiblePassword,
             validator: (data) {
               if (data == null || data.isEmpty) {
@@ -102,9 +108,9 @@ class _SignUpFormState extends State<SignUpForm> {
           const SizedBox(height: 15),
 
           // Confirm Password
-          CustomTextFormField(
-            icon: Icons.lock_outline,
-            label: 'Confirm Password',
+          AppTextFormField(
+            prefixIcon: Icons.lock,
+            labelText: "Password Confirmation",
             keyboardType: TextInputType.visiblePassword,
             validator: (data) {
               if (data == null || data.isEmpty) {
@@ -119,11 +125,35 @@ class _SignUpFormState extends State<SignUpForm> {
             controller: passwordConfirmationController,
             isPassword: true,
           ),
-          const SizedBox(height: 30),
-          AppButton(
-            title: 'Create Account',
-            onPressed: () {},
+          const SizedBox(height: 50),
+          // Sign Up Button
+          BlocBuilder<SignUpCubit, SignUpState>(
+            builder: (context, state) {
+              return AppButton(
+                title: 'Sign Up',
+                isLoading: state is SignUpLoading,
+                onPressed: () async {
+                  // Handle sign up logic
+                  if (_formKey.currentState!.validate()) {
+                    await context.read<SignUpCubit>().signUp(
+                          SignUpRequestBody(
+                            name: nameController.text.trim(),
+                            email: emailController.text.trim(),
+                            password: passwordController.text.trim(),
+                            confirmPassword:
+                                passwordConfirmationController.text.trim(),
+                            phone: phoneController.text.trim(),
+                            gender: 0,
+                          ),
+                        );
+                  }
+                },
+              );
+            },
           ),
+          const SizedBox(height: 30),
+          const AlreadyHaveAccount(),
+          // Confirm Password
         ],
       ),
     );

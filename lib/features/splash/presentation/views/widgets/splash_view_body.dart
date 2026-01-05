@@ -1,3 +1,5 @@
+import 'package:book_store_app/core/utils/shared_pref_keys.dart';
+
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/assets.dart';
 import 'package:flutter/cupertino.dart';
@@ -62,16 +64,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-    Future.delayed(
-      const Duration(seconds: 2),
-      () {
-        // Get.to(() => const HomeView(),
-        //     // calculations
-        //     transition: Transition.fade,
-        //     duration: kTranstionDuration);
+    Future.delayed(const Duration(seconds: 2), () {
+      // Get.to(() => const HomeView(),
+      //     // calculations
+      //     transition: Transition.fade,
+      //     duration: kTranstionDuration);
 
-        GoRouter.of(context).push(AppRouter.kLoginView);
-      },
-    );
+      GoRouter.of(context).push(AppRouter.kLoginView);
+    });
   }
 }

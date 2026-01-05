@@ -1,3 +1,5 @@
+import 'package:book_store_app/core/widgets/dio_factory.dart';
+
 import '../../Features/home/data/repos/home_repo_impl.dart';
 import '../../Features/search/data/repos/seach_repo_implement.dart';
 import '../../Features/search/data/repos/search_repo.dart';
@@ -9,7 +11,7 @@ final getIt = GetIt.instance;
 
 void setUpGetIt() {
   getIt.registerLazySingleton<Dio>(
-    () => Dio(),
+    () => DioFactory().getDio(),
   );
 
   getIt.registerLazySingleton<ApiService>(

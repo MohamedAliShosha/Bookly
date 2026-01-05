@@ -1,34 +1,47 @@
 import 'package:flutter/material.dart';
 
+/// Reusable Button
 class AppButton extends StatelessWidget {
-  const AppButton({
-    super.key,
-    required this.title,
-    required this.onPressed,
-  });
-
   final String title;
   final VoidCallback onPressed;
+  final bool isLoading;
+
+  const AppButton(
+      {super.key,
+      required this.onPressed,
+      this.isLoading = false,
+      required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blueAccent,
-          padding: const EdgeInsets.symmetric(vertical: 15),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+    return IgnorePointer(
+      // // the button will not respond to user interactions while loading this is useful to disable the button while loading process is going on to prevent multiple clicks
+      ignoring: isLoading == true,
+      child: SizedBox(
+        width: double.infinity,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueAccent,
+            padding: const EdgeInsets.symmetric(vertical: 15),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+                12,
+              ),
+            ),
           ),
-        ),
-        onPressed: onPressed,
-        child: Text(
-          title,
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
+          onPressed: onPressed,
+          child: isLoading == true
+              ? const CircularProgressIndicator(
+                  color: Colors.white,
+                )
+              : Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
         ),
       ),
     );
