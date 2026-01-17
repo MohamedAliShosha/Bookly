@@ -6,6 +6,7 @@ import 'package:book_store_app/Features/auth/sign_up/data/repos/sign_up_repo_imp
 import 'package:book_store_app/Features/auth/sign_up/presentation/manager/sign_up/sign_up_cubit.dart';
 import 'package:book_store_app/Features/auth/sign_up/presentation/views/sign_up_view.dart';
 import 'package:book_store_app/Features/auth/sign_up/service/sign_up_service.dart';
+import 'package:book_store_app/Features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:dio/dio.dart';
 
 import '../../Features/search/data/repos/search_repo.dart';
@@ -22,8 +23,6 @@ import '../services/service_locator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../Features/Splash/presentation/views/splash_view.dart';
-
 abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kLoginView = '/loginView';
@@ -35,7 +34,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SplashView(),
+        builder: (context, state) => const OnboardingView(),
       ),
       GoRoute(
         path:
