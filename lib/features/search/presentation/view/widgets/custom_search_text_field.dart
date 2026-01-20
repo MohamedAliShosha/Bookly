@@ -1,3 +1,5 @@
+import 'package:book_store_app/constants.dart';
+
 import '../../search_cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,6 +30,9 @@ class CustomSearchTextField extends StatelessWidget {
         enabledBorder: buildOutlLinedInputBorder(),
         focusedBorder: buildOutlLinedInputBorder(),
         hintText: 'Search for books by Category',
+        helperStyle: const TextStyle(
+          fontFamily: kGtSectraFine,
+        ),
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
