@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/function/build_enabled_border.dart';
 import 'package:book_store_app/core/function/build_focused_border.dart';
 import 'package:flutter/material.dart';
@@ -65,6 +66,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
             : null,
         labelStyle: const TextStyle(
           color: Colors.white,
+          fontFamily: kGtSectraFine,
         ),
         filled: true,
         fillColor: Colors.white.withOpacity(

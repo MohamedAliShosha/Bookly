@@ -1,5 +1,6 @@
 import 'package:book_store_app/Features/auth/sign_up/presentation/widgets/sign_up_bloc_listener.dart';
 import 'package:book_store_app/Features/auth/sign_up/presentation/widgets/sign_up_form.dart';
+import 'package:book_store_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class SignUpViewBody extends StatelessWidget {
@@ -23,6 +24,7 @@ class SignUpViewBody extends StatelessWidget {
               "Create Account",
               style: TextStyle(
                 color: Colors.white,
+                fontFamily: kGtSectraFine,
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
@@ -32,7 +34,11 @@ class SignUpViewBody extends StatelessWidget {
               opacity: .7,
               child: Text(
                 "Sign up to get started",
-                style: TextStyle(fontSize: 15, color: Colors.white),
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.white,
+                  fontFamily: kGtSectraFine,
+                ),
               ),
             ),
             SizedBox(height: 35),

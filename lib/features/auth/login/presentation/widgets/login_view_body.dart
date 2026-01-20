@@ -1,5 +1,6 @@
 import 'package:book_store_app/Features/auth/login/presentation/widgets/login_bloc_listener.dart';
 import 'package:book_store_app/Features/auth/login/presentation/widgets/login_form.dart';
+import 'package:book_store_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -24,6 +25,7 @@ class LoginViewBody extends StatelessWidget {
               "Welcome Back",
               style: TextStyle(
                 color: Colors.white,
+                fontFamily: kGtSectraFine,
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
@@ -35,6 +37,7 @@ class LoginViewBody extends StatelessWidget {
               child: Text(
                 "Please sign in to continue",
                 style: TextStyle(
+                  fontFamily: kGtSectraFine,
                   fontSize: 15,
                   color: Colors.white,
                 ),

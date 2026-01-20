@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +15,11 @@ class DontHaveAccount extends StatelessWidget {
       children: [
         const Text(
           "Don’t have an account? ",
-          style: TextStyle(color: Colors.white, fontSize: 14),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontFamily: kGtSectraFine,
+          ),
         ),
         GestureDetector(
           onTap: () {
@@ -23,6 +28,7 @@ class DontHaveAccount extends StatelessWidget {
           child: const Text(
             "Sign up",
             style: TextStyle(
+              fontFamily: kGtSectraFine,
               color: Colors.blueAccent,
               fontWeight: FontWeight.bold,
               fontSize: 15,
