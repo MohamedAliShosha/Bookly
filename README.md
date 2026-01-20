@@ -25,6 +25,27 @@ A modern mobile app for discovering and exploring books, featuring:
 
 ##
 
+🔐 **Login View:**                                                                                                                                  
+  - 📧 Allows registered users to sign in using Email and Password                                                                                  
+  - 🆕 “Sign-up” navigation button for new users                                                                                               
+  - ✅ On successful login, users are directed to the Home View                                                                                  
+                                                                                                                                                   
+  <p align="left"> <img src="assets/screenShots/Bookly_login.png" alt="App Overview" height="1000"/> </p>                                                
+  
+##
+
+📝 **Sign-Up View:**                                                                                                                                
+  - 📝 Enables new users to create an account by entering: Name, Email, Phone, Password, and Confirm Password                                       
+  - ✅ On successful sign-up, users are directed to the Login View                                                                                
+  - ↩️ "Already have an account?" option                                                                                                            
+  - ➡️ "Login" navigation button                                                                                                                  
+                                                                                                                                                   
+  <p align="left">                                                                                                                                 
+  <img src="assets/screenShots/Bookly_sign_up.png" alt="App Overview" height="800"/>                                                                     
+</p>                                                                                                                                               
+
+##
+
 🏠 **Home View:**
 - Top App Bar: displays the BOOKLY logo, a menu icon that opens a navigation drawer, and a search icon for quick access to books.
 - Navigation Drawer: accessible from the menu icon and includes a Profile option for user-related actions.
