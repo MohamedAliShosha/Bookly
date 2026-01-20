@@ -62,6 +62,7 @@ class NewestBooksListViewItem extends StatelessWidget {
                           'Free',
                           style: Styles.textStyle20.copyWith(
                             fontWeight: FontWeight.bold,
+                            fontFamily: kGtSectraFine,
                           ),
                         ),
                         const Spacer(),
