@@ -7,6 +7,7 @@ import 'package:book_store_app/Features/auth/sign_up/presentation/manager/sign_u
 import 'package:book_store_app/Features/auth/sign_up/presentation/views/sign_up_view.dart';
 import 'package:book_store_app/Features/auth/sign_up/service/sign_up_service.dart';
 import 'package:book_store_app/Features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:book_store_app/Features/profile/presentation/views/profile_view.dart';
 import 'package:dio/dio.dart';
 
 import '../../Features/search/data/repos/search_repo.dart';
@@ -29,6 +30,7 @@ abstract class AppRouter {
   static const kBookDetailsView = '/bookDetailsView';
   static const kSearchView = '/searchView';
   static const kSignUpView = '/signUpView';
+  static const kProfileView = '/profileView';
 
   static final router = GoRouter(
     routes: [
@@ -49,6 +51,10 @@ abstract class AppRouter {
       GoRoute(
         path: kHomeView,
         builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kProfileView,
+        builder: (context, state) => const ProfileView(),
       ),
       GoRoute(
         path: kLoginView,

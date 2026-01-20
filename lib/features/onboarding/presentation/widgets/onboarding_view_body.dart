@@ -62,6 +62,7 @@ class OnboardingViewBody extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: theme.textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.w300,
+                      fontFamily: kGtSectraFine,
                       letterSpacing: 0.5,
                       color: Colors.white.withOpacity(0.9),
                     ),
@@ -71,6 +72,7 @@ class OnboardingViewBody extends StatelessWidget {
                     'Great Book',
                     textAlign: TextAlign.center,
                     style: theme.textTheme.headlineLarge?.copyWith(
+                      fontFamily: kGtSectraFine,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1,
                       color: Colors.white,
@@ -81,6 +83,8 @@ class OnboardingViewBody extends StatelessWidget {
                     'Explore thousands of books and find\nyour perfect read',
                     textAlign: TextAlign.center,
                     style: theme.textTheme.bodyLarge?.copyWith(
+                      fontFamily: kGtSectraFine,
+                      fontSize: 16,
                       color: Colors.white.withOpacity(0.7),
                       height: 1.5,
                       letterSpacing: 0.2,

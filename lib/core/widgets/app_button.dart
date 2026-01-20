@@ -1,3 +1,4 @@
+import 'package:book_store_app/constants.dart';
 import 'package:flutter/material.dart';
 
 /// Reusable Button
@@ -38,6 +39,7 @@ class AppButton extends StatelessWidget {
                   title,
                   style: const TextStyle(
                     color: Colors.white,
+                    fontFamily: kGtSectraFine,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
