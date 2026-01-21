@@ -70,7 +70,7 @@ A modern mobile app for discovering and exploring books, featuring:
 
 ##
 
-🔍 **Search Results View:**
+🔍 **Search View:**
 - Features a search bar at the top labeled “Search for books by Category.”
 - Displays a scrollable list of results with each item showing:
  - Book cover image.
