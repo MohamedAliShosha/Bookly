@@ -83,6 +83,17 @@ A modern mobile app for discovering and exploring books, featuring:
   <img src="assets/screenShots/Bookly_search.png" alt="App Overview" height="800"/>
 </p>
 
+##                                                                                                                                                 
+                                                                                                                                                   
+👤 **Profile View:**                                                                                                                                
+  - 🪪 Displays user info, including Name and Email                                                                                                 
+  - 🚪 Includes a Logout button for secure sign-out                                                                                                 
+                                                                                                                                                   
+<p align="left">                                                                                                                                   
+  <img src="assets/screenShots/Bookly_profile.png" alt="App Overview" height="800"/>                                                                     
+</p>                                                                                                                                               
+
+
 
 ## 🛠️ Tech Stack
 
